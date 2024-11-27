@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convertisseur CSV et XLSX en Graphique</title>
-    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./public/assets/styles/style.css">
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- jsPDF -->
@@ -41,7 +41,7 @@
             <button id="update-title">Mettre à jour le titre</button>
 
             <label for="chart-color">Couleur principale :</label>
-            <input type="color" id="chart-color" value="#4bc0c0" />
+            <input type="color" id="chart-color" value="#007bff" />
 
             <label for="chart-type">Type de graphique :</label>
             <select id="chart-type">
@@ -70,12 +70,21 @@
         <canvas id="chart"></canvas>
 
         <!-- Gnérérer un rapport -->
+        <div>
+            <label for="analysisObjective">Choisissez l'objectif de l'analyse :</label>
+            <select id="analysisObjective">
+                <option value="general">Analyse Générale</option>
+                <option value="sales">Optimisation des ventes</option>
+                <option value="production">Amélioration de la production</option>
+                <option value="finance">Analyse financière</option>
+                <option value="trends">Étude des tendances</option>
+            </select>
+        </div> <br>
         <button id="generateAIReport">Générer Rapport IA</button>
         <div id="reportOutput"></div>
     </div>
 
     <!-- Script principal -->
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/config.js"></script>
+    <script src="./public/assets/js/script.js"></script>
 </body>
 </html>

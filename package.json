@@ -1,5 +1,30 @@
 {
+  "name": "datagraph",
+  "version": "1.0.0",
+  "description": "Un projet SaaS pour analyser des données et générer des rapports.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "data-analysis",
+    "SaaS",
+    "OpenAI",
+    "Express",
+    "dotenv"
+  ],
+  "author": "Ton Nom",
+  "license": "MIT",
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
   }
 }
