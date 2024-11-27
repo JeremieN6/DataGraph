@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertisseur CSV et XLSX en Graphique</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- XLSX.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Convertisseur CSV et XLSX en Graphique</h1>
+        
+        <!-- Section Import de Fichier -->
+        <div class="file-upload">
+            <label for="file-input">Importez votre fichier CSV ou XLSX :</label>
+            <input type="file" id="file-input" accept=".csv, .xlsx">
+        </div>
+        
+        <!-- Section Délimiteur pour CSV -->
+        <!-- <div class="delimiter-options">
+            <label for="delimiter">Délimiteur (par défaut ",") :</label>
+            <input type="text" id="delimiter" placeholder="Ex. ;">
+        </div> -->
+
+        <!-- Section Sélection de la feuille (pour les fichiers XLSX) -->
+        <!-- <div class="sheet-select">
+            <label for="sheet-select">Sélectionner une feuille :</label>
+            <select id="sheet-select"></select>
+        </div> -->
+
+        <!-- Section Options du Graphique -->
+        <div class="chart-options">
+            <label for="chart-title">Titre du graphique :</label>
+            <input type="text" id="chart-title" placeholder="Titre du graphique">
+            <button id="update-title">Mettre à jour le titre</button>
+
+            <label for="chart-color">Couleur principale :</label>
+            <input type="color" id="chart-color" value="#4bc0c0" />
+
+            <label for="chart-type">Type de graphique :</label>
+            <select id="chart-type">
+                <option value="bar">Diagramme en bâtons</option>
+                <option value="line">Graphique en ligne</option>
+                <option value="pie">Diagramme circulaire</option>
+            </select>
+        </div>
+
+        <!-- Section Sélection des Colonnes -->
+        <div class="chart-columns">
+            <label for="x-column">Colonne X :</label>
+            <select id="x-column"></select>
+        
+            <label for="y-column">Colonne Y :</label>
+            <select id="y-column"></select>
+        </div>
+
+        <!-- Section Export -->
+        <div class="export-options">
+            <button id="export-png">Exporter en PNG</button>
+            <button id="export-pdf">Exporter en PDF</button>
+        </div>
+
+        <!-- Zone d'affichage du graphique -->
+        <canvas id="chart"></canvas>
+
+        <!-- Gnérérer un rapport -->
+        <button id="generateAIReport">Générer Rapport IA</button>
+        <div id="reportOutput"></div>
+    </div>
+
+    <!-- Script principal -->
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/config.js"></script>
+</body>
+</html>
