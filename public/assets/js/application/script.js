@@ -179,53 +179,30 @@ function exportToPDF() {
     pdf.save("graphique.pdf");
 }
 
-document.getElementById('generateAIReport').addEventListener('click', async () => {
-// Récupérer l'objectif sélectionné
-    const objective = document.getElementById('analysisObjective').value;
 
-    // Vérifier si parsedData existe et est valide
-    if (!parsedData || !parsedData.headers || !parsedData.dataRows) {
-        alert("Veuillez importer un fichier CSV ou XLSX valide.");
-        return;
-    }
 
-    try {
-        // Créer un résumé des données ou toute autre information nécessaire pour l'API
-        const dataSummary = {
-            headers: parsedData.headers,
-            dataRows: parsedData.dataRows,
-        };
+    document.getElementById('generateAIReport').addEventListener('click', async () => {
 
-        // Envoyer les données vers le serveur pour générer le rapport AI
-        const response = await fetch("http://localhost:3000/api/generate-report", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ dataSummary, objective }),
-        });
-
-        // Vérifier la réponse du serveur
-        const result = await response.json();
-
-        if (response.ok) {
-            // Afficher le rapport dans l'élément HTML
-            document.getElementById('reportOutput').innerHTML = result.report;
-        } else {
-            // Afficher un message d'erreur si la réponse est mauvaise
-            document.getElementById('reportOutput').innerText = `Erreur: ${result.error}`;
+        // Vérifier si parsedData existe et est valide
+        if (!parsedData || !parsedData.headers || !parsedData.dataRows) {
+            alert("Veuillez importer un fichier CSV ou XLSX valide.");
+            return;
         }
-    } catch (error) {
-        // Gérer les erreurs liées à la connexion ou autres
-        console.error("Erreur lors de la génération du rapport:", error);
-        alert("Une erreur est survenue lors de la génération du rapport.");
-    }
-});
 
-async function generateAIReport(parsedData) {
-    // Appel API
-    const headers = parsedData.headers; // ['Mois', 'Ventes', 'Profit'] Par exemple - En fonction des données uploadé
-    const rows = parsedData.dataRows; // Données des mois Par exemple - En fonction des données uploadé
+        try {
+            const reportText = await generateAIReport(parsedData);
+            document.getElementById('reportOutput').innerText = reportText;
+        } catch (error) {
+            console.error("Erreur lors de la génération du rapport:", error);
+            alert("Une erreur est survenue lors de la génération du rapport.");
+        }
+    });
+
+    async function generateAIReport(parsedData) {
+
+    //Appel API
+    const headers = parsedData.headers; // ['Mois', 'Ventes', 'Profit']
+    const rows = parsedData.dataRows; // Données des mois
 
     // Construction du texte à partir des données
     let dataSummary = `Voici les données du tableau :\n\n`;
@@ -234,10 +211,11 @@ async function generateAIReport(parsedData) {
     dataSummary += "-".repeat(headers.join(" | ").length) + "\n"; // Ligne de séparation
 
     rows.forEach((row) => {
-        dataSummary += row.join(" | ") + "\n"; // Lignes de données
+    dataSummary += row.join(" | ") + "\n"; // Lignes de données
     });
 
     console.log(dataSummary);
+
 
     const messages = [
         { role: "system", content: "Tu es un assistant qui analyse des données et génère des rapports." },
@@ -253,30 +231,46 @@ async function generateAIReport(parsedData) {
         ` },
     ];
 
+    // const prompt = `
+    // Analyse ces données et génère un rapport textuel en identifiant les points clés :
+    // ${dataSummary}
+
+    // Indique :
+    // - Le mois avec les ventes les plus élevées et le profit le plus élevé.
+    // - Le mois avec les ventes les plus faibles.
+    // - Les tendances générales (augmentation/diminution).
+    // - Les recommandations pour améliorer les ventes et les profits.
+    // `;
+    const API_KEY = process.env.OPENAI_API_KEY; // Remplace par ta clé API.
+  
     try {
-        // Envoie la requête à ton serveur local
-        const response = await fetch("/api/openai", {
+        const response = await fetch("https://api.openai.com/v1/chat/completions", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
+                Authorization: `Bearer ${API_KEY}`,
             },
-            body: JSON.stringify({ messages }), // Envoie uniquement les messages au backend
+            body: JSON.stringify({
+                model: "gpt-3.5-turbo", // Modèle utilisé
+                messages: messages, // Utilisation correcte des messages
+                max_tokens: 500, // Ajuste selon la longueur souhaitée
+                temperature: 0.7, // Ajuste pour varier la créativité
+            }),
         });
 
-        // Vérifie la réponse
+        // Vérification de la réponse
         if (!response.ok) {
             const errorData = await response.json();
-            console.error("Erreur API (via serveur local):", errorData);
-            throw new Error(`Erreur API OpenAI via serveur: ${errorData.error}`);
+            console.error("Erreur API:", errorData);
+            throw new Error(`Erreur API OpenAI: ${errorData.error.message}`);
         }
 
         const data = await response.json();
-        return data.choices[0].message.content; // Retourne le contenu généré par OpenAI
+        return data.choices[0].message.content; // Correct pour l'endpoint chat/completions
     } catch (error) {
         console.error("Erreur lors de la génération du rapport:", error);
         throw error;
     }
-}
-    
+  };
   
   

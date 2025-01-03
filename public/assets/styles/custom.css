@@ -1,0 +1,93 @@
+/* CHART OPTIONS */
+.containerChartOptions, .containerButtons{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin: 15px 0;
+}
+.chart-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+/* ROW GRAPH TYPE AND GRAPH COLOR */
+.contentGraphType {
+    width: 50%;
+}
+.colorPicker{
+    border: 0;
+    width: 60px;
+    height: 40px;
+    border-radius: 15px;
+    background-color: transparent;
+}
+.chartColorLabel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contentGraphColor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 50%;
+}
+.containerGraphType{
+    display: flex;
+    flex-direction: row;
+}
+/* ROW GRAPH COLUMNS */
+.contentColumnX, 
+.contentColumnY {
+    width: 100%;
+}
+/* ROW GRAPH TITLE */
+.contentGraphTitle,
+.container--btnTitle {
+    width: 100%;
+}
+.containerGraphTitle{
+    align-items: inherit;
+}
+.container--btnTitle {
+    display: flex;
+    align-items: end;
+}
+
+/* ROW BUTTONS ACTION */
+.containerButtonAction {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.analysisObjective{
+    margin-bottom: 15px;
+}
+.containerButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@media (min-width: 768px){
+    .containerChartOptions{
+        flex-direction:initial;
+    }
+    /* ROW GRAPH COLUMNS */
+    .contentColumnX, 
+    .contentColumnY {
+        width: 50%;
+    }
+    /* ROW BUTTONS ACTION */
+    .containerButtonAction {
+        flex-direction: row;
+        margin-top: 15px;
+    }
+    .containerButtons{
+        flex-direction: row;
+    }
+}

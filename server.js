@@ -21,6 +21,8 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.use('/', express.static(__dirname));
+
 // Définir le répertoire des fichiers statiques (ici, public)
 app.use('/public', express.static(path.join(__dirname, 'public')));
 

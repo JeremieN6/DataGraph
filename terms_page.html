@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DataGraph - Outil d'analyse de masse | Page Termes d'utilisation</title>
+    <link href="favicon.ico" rel="icon" type="image/png" />
+    <meta content="Full-featured, professional-looking software, saas and startup website template."
+        name="description" />
+    <meta
+        content="saas, saas template, site template, software, startup, digital product, html5, landing, marketing, bootstrap, uikit3, agency, ai, digital agency, it solutions, nodejs"
+        name="keywords" />
+    <!-- <link href="https://unistudio.co/html/Lexend" rel="canonical" /> -->
+    <meta content="#178d72" name="theme-color" />
+    <!-- Open Graph Tags -->
+    <meta content="en_US" property="og:locale" />
+    <meta content="website" property="og:type" />
+    <meta content="DataGraph" property="og:title" />
+    <meta content="Full-featured, Professional-looking SaaS, Software and Startup Site Template."
+        property="og:description" />
+    <meta content="https://unistudio.co/html/DataGraph/" property="og:url" />
+    <meta content="DataGraph" property="og:site_name" />
+    <!-- <meta content="https://unistudio.co/html/lexend/assets/./public/assets/common/seo-image.jpg" property="og:image" /> -->
+    <meta content="1180" property="og:image:width" />
+    <meta content="600" property="og:image:height" />
+    <meta content="image/png" property="og:image:type" />
+    <!-- Twitter Card Tags -->
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="Lexend" name="twitter:title" />
+    <meta content="Full-featured, Professional-looking SaaS, Software and Startup Site Template."
+        name="twitter:description" />
+    <!-- <meta content="https://unistudio.co/html/lexend/assets/./public/assets/common/seo-image.jpg" name="twitter:image" /> -->
+    <link href="https://unistudio.co/html/lexend/" rel="canonical" />
+    <!-- preload head styles -->
+    <link href="./public/assets/styles/prettify.min.css" rel="stylesheet" />
+    <link href="./public/assets/styles/unicons.min.css" rel="stylesheet" />
+    <link href="./public/assets/styles/magic-cursor.min.css" rel="stylesheet" />
+    <!-- Carousel - CSS Include -->
+    <link href="./public/assets/styles/swiper-bundle.min.css" rel="stylesheet" />
+    <!-- include uni-core components -->
+    <link href="./public/assets/styles/uni-core.min.css" rel="stylesheet" />
+    <!-- include main style -->
+    <link href="./public/assets/styles/main.min.purge.css" rel="stylesheet" />
+    <!-- custom style -->
+    <link href="./public/assets/styles/custom.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body
+    class="uni-body panel bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-200 overflow-x-hidden disable-cursor">
+    <!--  Bottom Actions Sticky -->
+    <div class="backtotop-wrap position-fixed bottom-0 end-0 z-99 m-2 vstack">
+        <div class="darkmode-trigger cstack w-40px h-40px rounded-circle text-none bg-gray-100 dark:bg-gray-700 dark:text-white"
+            data-darkmode-toggle="">
+            <label class="switch">
+                <span class="sr-only">Dark mode toggle</span>
+                <input type="checkbox" />
+                <span class="slider fs-5"></span>
+            </label>
+        </div>
+        <a class="btn btn-sm bg-primary text-white w-40px h-40px rounded-circle" data-uc-backtotop="" href="to_top">
+            <i class="icon-2 unicon-chevron-up"></i>
+        </a>
+    </div>
+    <!--  GDPR modal -->
+    <div class="uc-gdpr-notification uc-notification min-w-1/2 uc-notification-bottom-left lg:m-2"
+        id="uc-gdpr-notification">
+        <div
+            class="uc-notification-message vstack lg:hstack items-end gap-2 lg:gap-4 lg:p-3 bg-white text-dark border rounded-1-5 min-w-1/2">
+            <a class="uc-notification-close text-dark" data-uc-close="" id="uc-close-gdpr-notification"></a>
+            <div class="vstack">
+                <h2 class="h5 ft-primary fw-bold -ls-1 m-0 text-dark">Conformité à la Loi RGPD</h2>
+                <p class="fs-6 mt-1">Nous utilisons des cookies pour vous garantir une expérience optimale sur notre site web. En continuant
+                    d'utiliser notre site, vous acceptez notre utilisation des cookies, <a class="uc-link text-underline"
+                        href="page-privacy.php">politique de Confidentialité</a> et <a class="uc-link text-underline"
+                        href="page-terms.php">conditions d'utilisation</a>.</p>
+            </div>
+            <button class="btn btn-sm btn-primary px-2" id="uc-accept-gdpr">Accepter</button>
+        </div>
+    </div>
+    <!--  Search modal -->
+    <div class="uc-modal-full uc-modal" data-uc-modal="overlay: true" id="uc-search-modal">
+        <div class="uc-modal-dialog d-flex justify-center bg-white text-dark dark:bg-gray-900 dark:text-white"
+            data-uc-height-viewport="">
+            <div class="uc-modal-close-full m-1 p-0 vstack gap-narrow text-center">
+                <button
+                    class="icon-3 btn btn-md btn-dark dark:bg-white dark:text-dark w-24px sm:w-32px h-24px sm:h-32px rounded-circle flex-1"
+                    type="button">
+                    <i class="unicon-close"></i>
+                </button>
+                <span class="ft-tertiary fs-7">ESC</span>
+            </div>
+        </div>
+    </div>
+    <!--  Newsletter modal -->
+    <div data-uc-modal="overlay: true" id="uc-newsletter-modal">
+        <div
+            class="uc-modal-dialog w-800px bg-white text-dark dark:bg-gray-900 dark:text-white rounded-3 p-1 overflow-hidden">
+            <button
+                class="uc-modal-close-default p-0 icon-3 btn border-0 dark:text-white dark:text-opacity-50 hover:text-primary hover:rotate-90 duration-150 transition-all"
+                type="button">
+                <i class="unicon-close"></i>
+            </button>
+            <div class="row md:child-cols-6 col-match g-0">
+                <div class="d-none md:d-flex">
+                    <div class="position-relative w-100 ratio-1x1 rounded-2 overflow-hidden">
+                        <img alt="Newsletter image" class="media-cover" src="./public/assets/images/newsletter.jpg" />
+                    </div>
+                </div>
+                <div>
+                    <div class="panel vstack self-center p-4 md:py-8 text-center">
+                        <h3 class="h3 md:h2">Souscrivez à la newsletter</h3>
+                        <p class="ft-tertiary">
+                            Rejoignez +10k personne pour être notifié des dernières mises à jour.</p>
+                        <div class="panel mt-2 lg:mt-4">
+                            <form class="vstack gap-1">
+                                <input
+                                    class="form-control form-control-sm w-full fs-6 bg-white dark:border-white dark:border-gray-700"
+                                    placeholder="Your email address.." type="email" />
+                                <button class="btn btn-sm btn-primary" type="submit">Souscrire</button>
+                            </form>
+                            <p class="fs-7 mt-2">Pas de panique, aucun spam ici!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  Acccount modal -->
+    <div data-uc-modal="overlay: true" id="uc-account-modal">
+        <div class="uc-modal-dialog lg:max-w-500px bg-secondary text-dark dark:bg-gray-800 dark:text-white rounded">
+            <button
+                class="uc-modal-close-default top-0 ltr:end-0 rtl:start-0 rtl:end-auto m-2 p-0 border-0 icon-2 lg:icon-3 btn btn-md dark:text-white transition-transform duration-150 hover:rotate-90"
+                type="button">
+                <i class="unicon-close"></i>
+            </button>
+            <div class="panel vstack gap-2 md:gap-4 text-center">
+                <ul class="account-tabs-nav nav-x justify-center h6 py-2 border-bottom d-none"
+                    data-uc-switcher="animation: uc-animation-slide-bottom-small, uc-animation-slide-top-small">
+                    <li><a href="#">Connexion</a></li>
+                    <li><a href="#">Inscription</a></li>
+                    <li><a href="#">Mot de passe oublié</a></li>
+                    <li><a href="#">Conditions d'utilisation</a></li>
+                </ul>
+                <div
+                    class="account-tabs-content uc-switcher px-3 lg:px-4 py-4 lg:py-8 m-0 lg:mx-auto vstack justify-center items-center">
+                    <div class="w-100">
+                        <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                            <h4 class="h5 lg:h4 m-0">Connexion</h4>
+                            <div class="panel vstack gap-4 w-100 sm:w-350px mx-auto">
+                                <form class="vstack gap-2">
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark"
+                                        placeholder="Your email" required="" type="email" />
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark"
+                                        placeholder="Password" required="" type="password" />
+                                    <div class="hstack justify-between items-start text-start">
+                                        <div class="form-check text-start rtl:text-end">
+                                            <input
+                                                class="form-check-input rounded-0 dark:bg-gray-900 dark:text-white dark:border-gray-700"
+                                                id="inputCheckRemember" type="checkbox" />
+                                            <label class="hstack justify-between form-check-label fs-7 sm:fs-6"
+                                                for="inputCheckRemember">Se souvenir de moi?</label>
+                                        </div>
+                                        <a class="uc-link" data-uc-switcher-item="2" href="#">Mot de passe oublié ?</a>
+                                    </div>
+                                    <button class="btn btn-primary btn-md text-white lg:mt-2" type="submit">Connexion</button>
+                                </form>
+                                <div class="panel">
+                                    <hr class="m-0" />
+                                    <span
+                                        class="position-absolute top-50 start-50 translate-middle p-1 fs-7 text-uppercase bg-white dark:bg-gray-800">Ou</span>
+                                </div>
+                                <div class="hstack gap-2">
+                                    <a class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10"
+                                        href="#google">
+                                        <i class="icon icon-1 unicon-logo-google"></i>
+                                    </a>
+                                    <a class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10"
+                                        href="#facebook">
+                                        <i class="icon icon-1 unicon-logo-facebook"></i>
+                                    </a>
+                                    <a class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10"
+                                        href="#x">
+                                        <i class="icon icon-1 unicon-logo-x-filled"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="fs-7 sm:fs-6">Pas encore de compte ? <a class="uc-link" data-uc-switcher-item="1"
+                                    href="#">S'inscrire</a></p>
+                        </div>
+                    </div>
+                    <div class="w-100">
+                        <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                            <h4 class="h5 lg:h4 m-0">Créer un compte</h4>
+                            <div class="panel vstack gap-4 w-100 sm:w-350px mx-auto">
+                                <form class="vstack gap-2">
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark"
+                                        placeholder="Full name" required="" type="text" />
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark"
+                                        placeholder="Your email" required="" type="email" />
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark"
+                                        placeholder="Password" required="" type="password" />
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark"
+                                        placeholder="Re-enter Password" required="" type="password" />
+                                    <div class="hstack text-start">
+                                        <div class="form-check text-start rtl:text-end">
+                                            <input
+                                                class="form-check-input rounded-0 dark:bg-gray-900 dark:text-white dark:border-gray-700"
+                                                required="" type="checkbox" />
+                                            <label class="hstack justify-between form-check-label fs-7 sm:fs-6">J'ai lu et j'accepte les <a class="uc-link ltr:ms-narrow rtl:me-narrow"
+                                                    data-uc-switcher-item="3" href="#">conditions d'utilisation</a>. </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary btn-md text-white lg:mt-2" type="submit">S'inscrire</button>
+                                </form>
+                                <div class="panel">
+                                    <hr class="m-0" />
+                                    <span
+                                        class="position-absolute top-50 start-50 translate-middle p-1 fs-7 text-uppercase bg-white dark:bg-gray-800">Ou</span>
+                                </div>
+                                <div class="hstack gap-2">
+                                    <a class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10"
+                                        href="#google">
+                                        <i class="icon icon-1 unicon-logo-google"></i>
+                                    </a>
+                                    <a class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10"
+                                        href="#facebook">
+                                        <i class="icon icon-1 unicon-logo-facebook"></i>
+                                    </a>
+                                    <a class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10"
+                                        href="#x">
+                                        <i class="icon icon-1 unicon-logo-x-filled"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="fs-7 sm:fs-6">Vous avez déjà un compte ? <a class="uc-link"
+                                    data-uc-switcher-item="0" href="#">Se connecter</a></p>
+                        </div>
+                    </div>
+                    <div class="w-100">
+                        <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                            <h4 class="h5 lg:h4 m-0">Réinitialiser le mot de passe</h4>
+                            <div class="panel w-100 sm:w-350px">
+                                <form class="vstack gap-2">
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark"
+                                        placeholder="Your email" required="" type="email" />
+                                    <div class="form-check text-start rtl:text-end">
+                                        <input
+                                            class="form-check-input rounded-0 dark:bg-gray-900 dark:text-white dark:border-gray-700"
+                                            id="inputCheckVerify" required="" type="checkbox" />
+                                        <label class="form-check-label fs-7 sm:fs-6" for="inputCheckVerify"> <span>Je ne suis pas un robot</span>. </label>
+                                    </div>
+                                    <button class="btn btn-primary btn-md text-white lg:mt-2" type="submit">Réinitialiser le mot de passe</button>
+                                </form>
+                            </div>
+                            <p class="fs-7 sm:fs-6 mt-2 sm:m-0">Se souvenir du mot de passe ? <a class="uc-link"
+                                    data-uc-switcher-item="0" href="#">Connexion</a></p>
+                        </div>
+                    </div>
+                    <div class="w-100">
+                        <div class="panel vstack justify-center items-center gap-2 sm:gap-4">
+                            <h4 class="h5 lg:h4 m-0">Terms of use</h4>
+                            <div class="page-content panel fs-6 text-start max-h-400px overflow-scroll">
+                                <p>Terms of use dolor sit amet consectetur, adipisicing elit. Recusandae provident ullam
+                                    aperiam quo ad non corrupti sit vel quam repellat ipsa quod sed, repellendus
+                                    adipisci, ducimus ea modi odio assumenda.</p>
+                                <h5 class="h6 md:h5 mt-3 mb-1">Disclaimers</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, cum esse possimus
+                                    officiis amet ea voluptatibus libero! Dolorum assumenda esse, deserunt ipsum ad
+                                    iusto! Praesentium error nobis tenetur at, quis nostrum facere excepturi architecto
+                                    totam.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias
+                                    eaque modi ipsum sint iusto fugiat vero velit rerum.</p>
+                                <h5 class="h6 md:h5 mt-3 mb-1">Limitation on Liability</h5>
+                                <p>Sequi, cum esse possimus officiis amet ea voluptatibus libero! Dolorum assumenda
+                                    esse, deserunt ipsum ad iusto! Praesentium error nobis tenetur at, quis nostrum
+                                    facere excepturi architecto totam.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias
+                                    eaque modi ipsum sint iusto fugiat vero velit rerum.</p>
+                                <h5 class="h6 md:h5 mt-3 mb-1">Copyright Policy</h5>
+                                <p>Dolor sit amet consectetur adipisicing elit. Sequi, cum esse possimus officiis amet
+                                    ea voluptatibus libero! Dolorum assumenda esse, deserunt ipsum ad iusto! Praesentium
+                                    error nobis tenetur at, quis nostrum facere excepturi architecto totam.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias
+                                    eaque modi ipsum sint iusto fugiat vero velit rerum.</p>
+                                <h5 class="h6 md:h5 mt-3 mb-1">General</h5>
+                                <p>Sit amet consectetur adipisicing elit. Sequi, cum esse possimus officiis amet ea
+                                    voluptatibus libero! Dolorum assumenda esse, deserunt ipsum ad iusto! Praesentium
+                                    error nobis tenetur at, quis nostrum facere excepturi architecto totam.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias
+                                    eaque modi ipsum sint iusto fugiat vero velit rerum.</p>
+                            </div>
+                            <p class="fs-7 sm:fs-6">Do you agree to our terms? <a class="uc-link"
+                                    data-uc-switcher-item="1" href="#">Sign up</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  Menu panel -->
+    <div data-uc-offcanvas="overlay: true;" id="uc-menu-panel">
+        <div class="uc-offcanvas-bar bg-white text-dark dark:bg-gray-900 dark:text-white">
+            <header class="uc-offcanvas-header hstack justify-between items-center pb-2 bg-white dark:bg-gray-900">
+                <div class="uc-logo">
+                    <a class="h5 text-none text-gray-900 dark:text-white" href="index.html">
+                        <img alt="Lexend" class="w-32px" src="./public/assets/images/logo-mark.png" />
+                    </a>
+                </div>
+                <button
+                    class="uc-offcanvas-close rtl:end-auto rtl:start-0 m-1 mt-2 icon-3 btn border-0 dark:text-white dark:text-opacity-50 hover:text-primary hover:rotate-90 duration-150 transition-all"
+                    type="button">
+                    <i class="unicon-close"></i>
+                </button>
+            </header>
+            <div class="panel">
+                <ul class="nav-y gap-narrow fw-medium fs-6" data-uc-nav="">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="page-features.php">Fonctionnalités</a></li>
+                    <li><a href="page-pricing.php">Tarifs</a></li>
+                    <li><a href="page-about.php">A propos</a></li>
+                    <li><a href="page-contact.php">Contact</a></li>
+                    <li class="hr opacity-10 my-1"></li>
+                </ul>
+                <ul class="social-icons nav-x mt-4">
+                    <li>
+                        <a href="#"><i class="fa-brands fa-x-twitter icon-2"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram icon-2"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest icon-2"></i></a>
+                    </li>
+                </ul>
+                <div class="py-2 hstack gap-2 mt-4 bg-white dark:bg-gray-900" data-uc-sticky="position: bottom">
+                    <div class="vstack gap-1">
+                        <span class="fs-7 opacity-60">Selectionnez le thème:</span>
+                        <div class="darkmode-trigger" data-darkmode-switch="">
+                            <label class="switch">
+                                <input type="checkbox" />
+                                <span class="slider fs-5"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  Cart panel -->
+    <!-- <div data-uc-offcanvas="overlay: true; flip: true;" id="uc-cart-panel">
+        <div class="uc-offcanvas-bar bg-white text-dark dark:bg-gray-900 dark:text-white">
+            <button
+                class="uc-offcanvas-close top-0 ltr:end-0 rtl:start-0 rtl:end-auto m-2 p-0 border-0 icon-2 lg:icon-3 btn btn-md dark:text-white transition-transform duration-150 hover:rotate-90"
+                type="button">
+                <i class="unicon-close"></i>
+            </button>
+            <div class="mini-cart-content vstack justify-between panel h-100">
+                <div class="mini-cart-header">
+                    <h3 class="title h5 m-0 text-dark dark:bg-gray-900">Shopping cart</h3>
+                </div>
+                <div class="mini-cart-listing panel flex-1 my-4 overflow-scroll">
+                    <p class="alert alert-warning" hidden="">Your cart empty!</p>
+                    <div class="panel vstack gap-3">
+                        <div>
+                            <article class="product type-product panel">
+                                <div class="hstack gap-2">
+                                    <figure
+                                        class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
+                                        <img alt="Laptop Cover"
+                                            class="media-cover image uc-transition-scale-up uc-transition-opaque"
+                                            src="./public/assets/images/img-07.jpg" />
+                                        <a class="position-cover" data-caption="Laptop Cover"
+                                            href="shop-product-detail.php"></a>
+                                    </figure>
+                                    <div class="content vstack gap-narrow fs-6">
+                                        <h5 class="h6 m-0"><a class="text-none text-dark dark:text-white"
+                                                href="shop-product-detail.php">Laptop Cover</a></h5>
+                                        <div class="hstack gap-narrow fs-7 opacity-50 text-dark dark:text-white"><span
+                                                class="qty">1</span> x <span class="price">$24.00</span></div>
+                                        <a class="remove fs-7 text-dark dark:text-white"
+                                            href="#remove_from_cart">Remove</a>
+                                    </div>
+                                    <a class="remove position-absolute top-0 end-0 btn p-0 hover:text-danger" hidden=""
+                                        href="#remove_from_cart">
+                                        <i class="unicon-close icon-1"></i>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                        <div>
+                            <article class="product type-product panel">
+                                <div class="hstack gap-2">
+                                    <figure
+                                        class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
+                                        <img alt="Disney Toys"
+                                            class="media-cover image uc-transition-scale-up uc-transition-opaque"
+                                            src="./public/assets/images/img-08.jpg" />
+                                        <a class="position-cover" data-caption="Disney Toys"
+                                            href="shop-product-detail.php"></a>
+                                    </figure>
+                                    <div class="content vstack gap-narrow fs-6">
+                                        <h5 class="h6 m-0"><a class="text-none text-dark dark:text-white"
+                                                href="shop-product-detail.php">Disney Toys</a></h5>
+                                        <div class="hstack gap-narrow fs-7 opacity-50 text-dark dark:text-white"><span
+                                                class="qty">1</span> x <span class="price">$5.00</span></div>
+                                        <a class="remove fs-7 text-dark dark:text-white"
+                                            href="#remove_from_cart">Remove</a>
+                                    </div>
+                                    <a class="remove position-absolute top-0 end-0 btn p-0 hover:text-danger" hidden=""
+                                        href="#remove_from_cart">
+                                        <i class="unicon-close icon-1"></i>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                        <div>
+                            <article class="product type-product panel">
+                                <div class="hstack gap-2">
+                                    <figure
+                                        class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
+                                        <img alt="Screen Axe"
+                                            class="media-cover image uc-transition-scale-up uc-transition-opaque"
+                                            src="./public/assets/images/img-09.jpg" />
+                                        <a class="position-cover" data-caption="Screen Axe"
+                                            href="shop-product-detail.php"></a>
+                                    </figure>
+                                    <div class="content vstack gap-narrow fs-6">
+                                        <h5 class="h6 m-0"><a class="text-none text-dark dark:text-white"
+                                                href="shop-product-detail.php">Screen Axe</a></h5>
+                                        <div class="hstack gap-narrow fs-7 opacity-50 text-dark dark:text-white"><span
+                                                class="qty">1</span> x <span class="price">$19.00</span></div>
+                                        <a class="remove fs-7 text-dark dark:text-white"
+                                            href="#remove_from_cart">Remove</a>
+                                    </div>
+                                    <a class="remove position-absolute top-0 end-0 btn p-0 hover:text-danger" hidden=""
+                                        href="#remove_from_cart">
+                                        <i class="unicon-close icon-1"></i>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                        <div>
+                            <article class="product type-product panel">
+                                <div class="hstack gap-2">
+                                    <figure
+                                        class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
+                                        <img alt="Airpods Pro"
+                                            class="media-cover image uc-transition-scale-up uc-transition-opaque"
+                                            src="./public/assets/images/img-10.jpg" />
+                                        <a class="position-cover" data-caption="Airpods Pro"
+                                            href="shop-product-detail.php"></a>
+                                    </figure>
+                                    <div class="content vstack gap-narrow fs-6">
+                                        <h5 class="h6 m-0"><a class="text-none text-dark dark:text-white"
+                                                href="shop-product-detail.php">Airpods Pro</a></h5>
+                                        <div class="hstack gap-narrow fs-7 opacity-50 text-dark dark:text-white"><span
+                                                class="qty">1</span> x <span class="price">$49.00</span></div>
+                                        <a class="remove fs-7 text-dark dark:text-white"
+                                            href="#remove_from_cart">Remove</a>
+                                    </div>
+                                    <a class="remove position-absolute top-0 end-0 btn p-0 hover:text-danger" hidden=""
+                                        href="#remove_from_cart">
+                                        <i class="unicon-close icon-1"></i>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="mini-cart-footer panel pt-3 border-top">
+                    <div class="panel vstack gap-3 justify-between">
+                        <div class="mini-cart-total hstack justify-between">
+                            <h5 class="h5 m-0 text-dark dark:text-white">Subtotal</h5>
+                            <b class="fs-5">$97.00</b>
+                        </div>
+                        <div class="mini-cart-actions vstack gap-1">
+                            <a class="btn btn-md btn-outline-gray-100 text-dark dark:text-white dark:border-gray-700 dark:hover:bg-gray-700"
+                                href="shop-cart.php">View cart</a>
+                            <a class="btn btn-md btn-primary text-white" href="shop-checkout.php">Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!--  Favorites modal -->
+    <!-- <div data-uc-modal="overlay: true" id="uc-favorites-panel">
+        <div class="uc-modal-dialog lg:max-w-500px bg-white text-dark dark:bg-gray-800 dark:text-white rounded">
+            <button
+                class="uc-modal-close-default top-0 ltr:end-0 rtl:start-0 rtl:end-auto m-2 p-0 border-0 icon-2 lg:icon-3 btn btn-md dark:text-white transition-transform duration-150 hover:rotate-90"
+                type="button">
+                <i class="unicon-close"></i>
+            </button>
+            <div class="panel vstack justify-center items-center gap-2 text-center py-8">
+                <i class="icon icon-4 unicon-bookmark mb-2 text-primary dark:text-white"></i>
+                <h2 class="h4 md:h3 m-0">Your favorites</h2>
+                <p class="fs-5 opacity-60">You have not yet added any recipe to your favorites list.</p>
+                <a class="btn btn-md btn-outline-gray-100 text-dark dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 mt-2 uc-modal-close"
+                    href="#">Browse recipes</a>
+            </div>
+        </div>
+    </div> -->
+    <!--  Contact modal -->
+    <div data-uc-modal="overlay: true" id="uc-contact-modal">
+        <div class="uc-modal-dialog lg:max-w-650px bg-secondary text-dark dark:bg-gray-800 dark:text-white rounded-1-5">
+            <button
+                class="uc-modal-close-default top-0 ltr:end-0 rtl:start-0 rtl:end-auto m-2 p-0 border-0 icon-2 lg:icon-3 btn btn-md dark:text-white transition-transform duration-150 hover:rotate-90"
+                type="button">
+                <i class="unicon-close"></i>
+            </button>
+            <div class="panel vstack gap-2 md:gap-4 text-center">
+                <div class="panel cstack px-3 md:px-4 py-4 md:py-8 m-0 lg:mx-auto">
+                    <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                        <h4 class="h5 lg:h4 m-0">Plannifier une démonstration</h4>
+                        <div class="panel w-100 sm:w-350px md:w-500px mx-auto">
+                            <form class="vstack gap-2">
+                                <div class="vstack lg:hstack gap-2">
+                                    <input
+                                        class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark"
+                                        placeholder="Full name*" required="" type="text" />
+                                    <input
+                                        class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark"
+                                        placeholder="Last name*" required="" type="text" />
+                                </div>
+                                <div class="vstack lg:hstack gap-2">
+                                    <input
+                                        class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark"
+                                        placeholder="Your email*" required="" type="email" />
+                                    <input
+                                        class="form-control h-48px w-100 md:w-1/2 rtl:text-end bg-white dark:border-white dark:text-dark"
+                                        placeholder="Phone number*" required="" type="tel" />
+                                </div>
+                                <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark"
+                                    placeholder="Company name*" required="" type="text" />
+                                <textarea
+                                    class="form-control min-h-150px w-full bg-white dark:border-white dark:text-dark"
+                                    placeholder="Your message.."></textarea>
+                                <button class="btn btn-primary btn-md text-white mt-2" type="submit">Planifier ma démonstration</button>
+                                <p class="fs-7 opacity-70 mt-2 text-center">Nous adapterons votre démonstration à vos besoins immédiats
+                                    besoins immédiats et répondrons à toutes vos questions. Préparez-vous à voir comment ça marche !</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header start -->
+    <header class="uc-header header-default uc-navbar-sticky-wrap z-999"
+        data-uc-sticky="start: 100vh; show-on-up: true; animation: uc-animation-slide-top; sel-target: .uc-navbar-container; cls-active: uc-navbar-sticky; cls-inactive: uc-navbar-transparent; end: !*;"
+        style="--uc-nav-height: 80px">
+        <nav class="uc-navbar-container uc-navbar-float ft-tertiary z-1"
+            data-anime="translateY: [-40, 0]; opacity: [0, 1]; easing: easeOutExpo; duration: 750; delay: 0;">
+            <div class="container max-w-xl">
+                <div class="uc-navbar min-h-64px lg:min-h-80px text-gray-900 dark:text-white"
+                    data-uc-navbar="mode: click; animation: uc-animation-slide-top-small; duration: 150;">
+                    <div class="uc-navbar-left">
+                        <div class="uc-logo text-dark dark:text-white">
+                            <a class="panel text-none" href="index.html" style="width: 140px">
+                                <!-- <img alt="DataGraph" class="dark:d-none" src="./public/assets/images/logo-light.svg" /> -->
+                                <img alt="DataGraph" class="dark:d-none" src="./public/assets/images/logo-light2.png" />
+                                <img alt="DataGraph" class="d-none dark:d-block" src="./public/assets/images/logo-dark2.png" />
+                                <!-- <img alt="DataGraph" class="d-none dark:d-block" src="./public/assets/images/logo-dark.svg" /> -->
+                            </a>
+                        </div>
+                        <ul class="uc-navbar-nav gap-3 xl:gap-4 d-none lg:d-flex fw-medium ms-2">
+                            <li><a href="features.html">Fonctionnalités</a></li>
+                            <li><a href="tarifs.html">Tarifs</a></li>
+                            <li><a href="a_propos.html">A propos</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="uc-navbar-right">
+                        <div class="d-none xl:d-block">
+                            <a class="text-none fw-medium" data-uc-toggle="" href="#uc-contact-modal">
+                                <span>Voir une démonstration</span>
+                            </a>
+                        </div>
+                        <a class="btn btn-sm btn-primary text-white text-none d-none lg:d-inline-flex"
+                            href="application.html">Commencez gratuitement</a>
+                        <a class="d-block lg:d-none" data-uc-navbar-toggle-icon="" data-uc-toggle=""
+                            href="#uc-menu-panel"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Site Header - End
+
+================================================== -->
+   
+    <!-- Wrapper start -->
+    <div class="wrap" id="wrapper">
+        <!-- Page Banner - Start
+================================================== -->
+        <!-- Page Banner - End
+
+================================================== -->
+        <div class="section py-4 lg:py-6 xl:py-8">
+            <div class="container max-w-lg">
+                <div class="page-wrap panel vstack gap-4 lg:gap-6 xl:gap-8">
+                    <header class="page-header panel vstack justify-center gap-2 lg:gap-4 text-center">
+                        <div class="panel">
+                            <h1 class="h3 lg:h1 m-0">Conditions d'utilisation</h1>
+                        </div>
+                    </header>
+                    <div class="page-content panel fs-6 md:fs-5">
+                        <p>Terms of use dolor sit amet consectetur, adipisicing elit. Recusandae provident ullam aperiam
+                            quo ad non corrupti sit vel quam repellat ipsa quod sed, repellendus adipisci, ducimus ea
+                            modi odio assumenda.</p>
+                        <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">Clause de non-responsabilité</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, cum esse possimus officiis
+                            amet ea voluptatibus libero! Dolorum assumenda esse, deserunt ipsum ad iusto! Praesentium
+                            error nobis tenetur at, quis nostrum facere excepturi architecto totam.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias eaque modi
+                            ipsum sint iusto fugiat vero velit rerum.</p>
+                        <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">Limitation de la responsabilité</h3>
+                        <p>Sequi, cum esse possimus officiis amet ea voluptatibus libero! Dolorum assumenda esse,
+                            deserunt ipsum ad iusto! Praesentium error nobis tenetur at, quis nostrum facere excepturi
+                            architecto totam.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias eaque modi
+                            ipsum sint iusto fugiat vero velit rerum.</p>
+                        <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">Politique du droit d'auteur</h3>
+                        <p>Dolor sit amet consectetur adipisicing elit. Sequi, cum esse possimus officiis amet ea
+                            voluptatibus libero! Dolorum assumenda esse, deserunt ipsum ad iusto! Praesentium error
+                            nobis tenetur at, quis nostrum facere excepturi architecto totam.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias eaque modi
+                            ipsum sint iusto fugiat vero velit rerum.</p>
+                        <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">General</h3>
+                        <p>Sit amet consectetur adipisicing elit. Sequi, cum esse possimus officiis amet ea voluptatibus
+                            libero! Dolorum assumenda esse, deserunt ipsum ad iusto! Praesentium error nobis tenetur at,
+                            quis nostrum facere excepturi architecto totam.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias eaque modi
+                            ipsum sint iusto fugiat vero velit rerum.</p>
+                    </div>
+                    <div class="page-footer panel">
+                        <p class="fs-7 opacity-60 m-0">Dernière mise à jour: 27 Nov, 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer start -->
+        <footer class="uc-footer panel overflow-hidden uc-dark" id="uc-footer">
+            <div class="footer-outer py-4 lg:py-6 xl:py-9 dark:bg-gray-900 dark:text-white">
+                <div class="container max-w-xl">
+                    <div class="footer-inner vstack gap-4 lg:gap-6 xl:gap-8">
+                        <div class="uc-footer-widgets panel">
+                            <div class="row child-cols-6 md:child-cols col-match g-4">
+                                <div class="col-12 lg:col-4">
+                                    <div class="panel vstack items-start gap-4 ltr:md:pe-8 rtl:md:ps-8">
+                                        <div class="vstack gap-2">
+                                            <a href="index.html">
+                                                <img alt="DataGraph" class="w-32px text-primary"
+                                                    src="./public/assets/images/logo-mark.png" />
+                                            </a>
+                                            <p>
+                                                Cet outil vous permet d'obtenir une visualisation graphique de vos données peu importe ce qu'elles représenent.
+                                                De cette façon, vous prendrez des décisions stratégies plus rapidement basé sur des données clair et une analyse poussée.
+                                            </p>
+                                        </div>
+                                        <div class="hstack items-start gap-1">
+                                            <a href="#">
+                                                <img alt="Google Play Store"
+                                                    class="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150"
+                                                    data-uc-svg="" src="./public/assets/images/playstore.svg" />
+                                            </a>
+                                            <a href="#">
+                                                <img alt="Apple Store"
+                                                    class="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150"
+                                                    data-uc-svg="" src="./public/assets/images/appstore.svg" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <ul class="nav-y gap-1 fw-medium">
+                                        <li><a href="features.html">Fonctionnalités</a></li>
+                                        <li><a href="a_propos.html">A propos</a></li>
+                                        <li><a href="tarifs.html">Tarifs</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="nav-y gap-1 fw-medium">
+                                        <li><a href="terms_page.html">Conditions d'utilisation</a></li>
+                                        <li><a href="privacy_page.html">Politique de Confidentialité</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="uc-footer-bottom panel vstack lg:hstack gap-4 justify-center lg:justify-between pt-4 lg:pt-6 border-top dark:text-white">
+                            <div
+                                class="vstack sm:hstack justify-center lg:justify-start items-center lg:items-start gap-1 lg:gap-2">
+                                <p class="opacity-60">DataGraph © 2024, Tous les droits réservés.</p>
+                                <ul class="nav-x gap-2 fw-medium">
+                                    <li><a href="privacy_page.html">Politique de Confidentialité</a></li>
+                                    <li><a href="terms_page.html">Mentions Legales</a></li>
+                                    <li><a href="#">Paramètres des cookies</a></li>
+                                </ul>
+                            </div>
+                            <div class="hstack justify-center lg:justify-end gap-2 lg:gap-3">
+                                <ul class="nav-x gap-2">
+                                    <li>
+                                        <a href="#"><i class="icon icon-2 fa-brands fa-linkedin"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon icon-2 fa-brands fa-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon icon-2 fa-brands fa-x"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon icon-2 fa-brands fa-instagram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon icon-2 fa-brands fa-youtube"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="vr"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer end -->
+    </div>
+    <!-- Body Wrap - End -->
+    <!-- include jquery & bootstrap js -->
+    <script defer="" src="./public/assets/js/jquery.min.js"></script>
+    <script defer="" src="./public/assets/js/bootstrap.min.js"></script>
+    <!-- include scripts -->
+    <script defer="" src="./public/assets/js/anime.min.js"></script>
+    <!-- Carousel - Jquery Include -->
+    <script defer="" src="./public/assets/js/swiper-bundle.min.js"></script>
+    <script defer="" src="./public/assets/js/swiper-helper.js"></script>
+    <script defer="" src="./public/assets/js/scrollmagic.min.js"></script>
+    <script defer="" src="./public/assets/js/typed.min.js"></script>
+    <script defer="" src="./public/assets/js/tilt.min.js"></script>
+    <script defer="" src="./public/assets/js/split-type.min.js"></script>
+    <script defer="" src="./public/assets/js/prettify.min.js"></script>
+    <script defer="" src="./public/assets/js/gsap.min.js"></script>
+    <script defer="" src="./public/assets/js/magic-cursor.js"></script>
+    <script defer="" src="./public/assets/js/data-attr-helper.js"></script>
+    <script defer="" src="./public/assets/js/splitype-helper.js"></script>
+    <script defer="" src="./public/assets/js/anime-helper.js"></script>
+    <script defer="" src="./public/assets/js/typed-helper.js"></script>
+    <script defer="" src="./public/assets/js/tilt-helper.js"></script>
+    <script defer="" src="./public/assets/js/marquee.js"></script>
+    <script defer="" src="./public/assets/js/uikit-components-bs.js"></script>
+    <!-- app head for bootstrap core -->
+    <script src="./public/assets/js/app-head-bs.js"></script>
+    <!-- include scripts -->
+    <script src="./public/assets/js/uni-core-bundle.min.js"></script>
+    <!-- include app script -->
+    <script defer="" src="./public/assets/js/app.js"></script>
+    <script defer="" src="./public/assets/js/script.js"></script>
+    <script>
+
+        // Schema toggle via URL
+
+        const queryString = window.location.search;
+
+        const urlParams = new URLSearchParams(queryString);
+
+        const getSchema = urlParams.get("schema");
+
+        if (getSchema === "dark") {
+
+            setDarkMode(1);
+
+        } else if (getSchema === "light") {
+
+            setDarkMode(0);
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>DataGraph - Outil d'analyse de masse | Page Index</title>
+    <title>DataGraph - Outil d'analyse de masse | Page Tarifs</title>
     <link href="favicon.ico" rel="icon" type="image/png" />
     <meta content="Full-featured, professional-looking software, saas and startup website template."
         name="description" />
@@ -22,7 +22,7 @@
         property="og:description" />
     <meta content="https://unistudio.co/html/DataGraph/" property="og:url" />
     <meta content="DataGraph" property="og:site_name" />
-    <!-- <meta content="https://unistudio.co/html/lexend/assets/images/common/seo-image.jpg" property="og:image" /> -->
+    <!-- <meta content="https://unistudio.co/html/lexend/assets/./public/assets/common/seo-image.jpg" property="og:image" /> -->
     <meta content="1180" property="og:image:width" />
     <meta content="600" property="og:image:height" />
     <meta content="image/png" property="og:image:type" />
@@ -31,7 +31,7 @@
     <meta content="Lexend" name="twitter:title" />
     <meta content="Full-featured, Professional-looking SaaS, Software and Startup Site Template."
         name="twitter:description" />
-    <!-- <meta content="https://unistudio.co/html/lexend/assets/images/common/seo-image.jpg" name="twitter:image" /> -->
+    <!-- <meta content="https://unistudio.co/html/lexend/assets/./public/assets/common/seo-image.jpg" name="twitter:image" /> -->
     <link href="https://unistudio.co/html/lexend/" rel="canonical" />
     <!-- preload head styles -->
     <link href="./public/assets/styles/prettify.min.css" rel="stylesheet" />
@@ -46,7 +46,9 @@
     <!-- custom style -->
     <link href="./public/assets/styles/custom.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body
@@ -58,14 +60,12 @@
             <label class="switch">
                 <span class="sr-only">Dark mode toggle</span>
                 <input type="checkbox" />
-                <span class="slider fs-5">
-                    <!-- <i class="fa-solid fa-circle-half-stroke"></i> -->
-                </span>
+                <span class="slider fs-5"></span>
             </label>
         </div>
         <a class="btn btn-sm bg-primary text-white w-40px h-40px rounded-circle" data-uc-backtotop="" href="to_top">
-            <!-- <i class="icon-2 unicon-chevron-up"></i> -->
-            <i class="icon-2 fa-solid fa-chevron-up"></i>
+        <!-- <i class="icon-2 unicon-chevron-up"></i> -->
+        <i class="icon-2 fa-solid fa-chevron-up"></i>
         </a>
     </div>
     <!--  GDPR modal -->
@@ -78,8 +78,8 @@
                 <h2 class="h5 ft-primary fw-bold -ls-1 m-0 text-dark">Conformité à la Loi RGPD</h2>
                 <p class="fs-6 mt-1">Nous utilisons des cookies pour vous garantir une expérience optimale sur notre site web. En continuant
                     d'utiliser notre site, vous acceptez notre utilisation des cookies, <a class="uc-link text-underline"
-                        href="page-privacy.php">politique de Confidentialité</a> et <a class="uc-link text-underline"
-                        href="page-terms.php">conditions d'utilisation</a>.</p>
+                        href="privacy_page.html">politique de Confidentialité</a> et <a class="uc-link text-underline"
+                        href="terms_page.html">conditions d'utilisation</a>.</p>
             </div>
             <button class="btn btn-sm btn-primary px-2" id="uc-accept-gdpr">Accepter</button>
         </div>
@@ -323,7 +323,7 @@
                 <ul class="nav-y gap-narrow fw-medium fs-6" data-uc-nav="">
                     <li><a href="#">Accueil</a></li>
                     <li><a href="page-features.php">Fonctionnalités</a></li>
-                    <li><a href="tarifs.html">Tarifs</a></li>
+                    <li><a href="page-pricing.php">Tarifs</a></li>
                     <li><a href="page-about.php">A propos</a></li>
                     <li><a href="page-contact.php">Contact</a></li>
                     <li class="hr opacity-10 my-1"></li>
@@ -350,7 +350,7 @@
         </div>
     </div>
     <!--  Cart panel -->
-    <div data-uc-offcanvas="overlay: true; flip: true;" id="uc-cart-panel">
+    <!-- <div data-uc-offcanvas="overlay: true; flip: true;" id="uc-cart-panel">
         <div class="uc-offcanvas-bar bg-white text-dark dark:bg-gray-900 dark:text-white">
             <button
                 class="uc-offcanvas-close top-0 ltr:end-0 rtl:start-0 rtl:end-auto m-2 p-0 border-0 icon-2 lg:icon-3 btn btn-md dark:text-white transition-transform duration-150 hover:rotate-90"
@@ -485,9 +485,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!--  Favorites modal -->
-    <div data-uc-modal="overlay: true" id="uc-favorites-panel">
+    <!-- <div data-uc-modal="overlay: true" id="uc-favorites-panel">
         <div class="uc-modal-dialog lg:max-w-500px bg-white text-dark dark:bg-gray-800 dark:text-white rounded">
             <button
                 class="uc-modal-close-default top-0 ltr:end-0 rtl:start-0 rtl:end-auto m-2 p-0 border-0 icon-2 lg:icon-3 btn btn-md dark:text-white transition-transform duration-150 hover:rotate-90"
@@ -502,7 +502,7 @@
                     href="#">Browse recipes</a>
             </div>
         </div>
-    </div>
+    </div> -->
     <!--  Contact modal -->
     <div data-uc-modal="overlay: true" id="uc-contact-modal">
         <div class="uc-modal-dialog lg:max-w-650px bg-secondary text-dark dark:bg-gray-800 dark:text-white rounded-1-5">
@@ -595,484 +595,137 @@
     <div class="wrap" id="wrapper">
         <!-- Section start -->
         <div class="hero-header section panel overflow-hidden" id="hero_header">
-            <div class="position-absolute top-0 start-0 end-0 h-600px lg:h-screen bg-secondary dark:bg-gray-800 z-0">
-            </div>
             <div class="position-absolute top-0 start-0 end-0 min-h-screen overflow-hidden d-none lg:d-block"
-                data-anime="onview: -100; targets: img; scale: [0.8, 1]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 350;">
+                data-anime="targets: &gt;*; scale: [0, 1]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 750});">
                 <div class="position-absolute top-0 start-0 rotate-45"
-                    style="top: 45% !important; left: 18% !important">
+                    style="top: 30% !important; left: 18% !important">
                     <img alt="star-1" class="w-32px text-gray-900 dark:text-white" data-uc-svg=""
                         src="./public/assets/images/star-1.svg" />
                 </div>
-                <div class="position-absolute top-0 end-0 rotate-45" style="top: 20% !important; right: 18% !important">
+                <div class="position-absolute top-0 end-0 rotate-45" style="top: 15% !important; right: 18% !important">
                     <img alt="star-2" class="w-24px text-gray-900 dark:text-white" data-uc-svg=""
                         src="./public/assets/images/star-2.svg" />
                 </div>
-                <div class="position-absolute top-0 start-0 translate-middle-y -rotate-12"
-                    style="top: 20% !important; left: 15% !important">
-                    <img alt="icon-trophy" class="w-56px xl:w-64px d-block dark:d-none" src="./public/assets/images/icon-trophy.svg" />
-                    <img alt="icon-trophy-dark" class="w-56px xl:w-64px d-none dark:d-block"
-                        src="./public/assets/images/icon-trophy-dark.svg" />
-                </div>
-                <div class="position-absolute top-0 start-0 translate-middle-y rotate-45 ms-n3"
-                    style="top: 35% !important">
-                    <img alt="icon-location" class="w-56px xl:w-64px d-block dark:d-none"
-                        src="./public/assets/images/icon-location.svg" />
-                    <img alt="icon-location-dark" class="w-56px xl:w-64px d-none dark:d-block"
-                        src="./public/assets/images/icon-location-dark.svg" />
-                </div>
-                <div class="position-absolute top-0 start-0 translate-middle-y"
-                    style="top: 80% !important; left: 8% !important">
-                    <img alt="icon-globe" class="w-56px xl:w-64px d-block dark:d-none" src="./public/assets/images/icon-globe.svg" />
-                    <img alt="icon-globe-dark" class="w-56px xl:w-64px d-none dark:d-block"
-                        src="./public/assets/images/icon-globe-dark.svg" />
-                </div>
-                <div class="position-absolute top-0 end-0 translate-middle-y rotate-45"
-                    style="top: 50% !important; right: 18% !important">
-                    <img alt="icon-crown" class="w-56px xl:w-64px d-block dark:d-none" src="./public/assets/images/icon-crown.svg" />
-                    <img alt="icon-crown-dark" class="w-56px xl:w-64px d-none dark:d-block"
-                        src="./public/assets/images/icon-crown-dark.svg" />
-                </div>
-                <div class="position-absolute top-0 end-0 translate-middle-y -rotate-45"
-                    style="top: 80% !important; right: 8% !important">
-                    <img alt="icon-diamond" class="w-56px xl:w-64px d-block dark:d-none"
-                        src="./public/assets/images/icon-diamond.svg" />
-                    <img alt="icon-diamond-dark" class="w-56px xl:w-64px d-none dark:d-block"
-                        src="./public/assets/images/icon-diamond-dark.svg" />
-                </div>
-                <div class="position-absolute top-0 end-0 translate-middle-y -rotate-12 me-n3"
-                    style="top: 35% !important">
-                    <img alt="icon-chat" class="w-56px xl:w-64px d-block dark:d-none" src="./public/assets/images/icon-chat.svg" />
-                    <img alt="icon-chat-dark" class="w-56px xl:w-64px d-none dark:d-block"
-                        src="./public/assets/images/icon-chat-dark.svg" />
-                </div>
             </div>
-            <div class="section-outer panel pb-10 pt-9 lg:py-10">
+            <div class="section-outer panel pt-9 lg:pt-10 pb-6 sm:pb-8 lg:pb-9">
                 <div class="container max-w-xl">
-                    <div class="section-inner panel">
-                        <div class="vstack items-center gap-2 lg:gap-4 mt-2 sm:mt-4 lg:mt-0 mb-6 lg:mb-8 max-w-750px mx-auto text-center"
+                    <div class="section-inner panel mt-2 sm:mt-4 lg:mt-0">
+                        <div class="vstack items-center gap-3 lg:gap-4 mb-4 sm:mb-6 lg:mb-8 max-w-750px mx-auto text-center"
                             data-anime="targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
-                            <h1 class="h2 sm:h1 lg:display-6 xl:display-4 m-0">
-                                Analysez vos données <br class="d-none lg:d-block" />
-                                les plus complexes
-                            </h1>
-                            <p class="fs-6 sm:fs-5 text-dark dark:text-white text-opacity-70">
-                                Transformez vos données en insights <br class="d-none sm:d-block" />
-                                ultra-visuels et exploitables, en un clic et gagner 3x plus de temps qu'auparavant !
-                            </p>
-                            <div class="vstack sm:hstack justify-center gap-1 lg:gap-2 mt-1 sm:mt-2">
-                                <a class="btn btn-md lg:btn-lg btn-primary text-white" href="application.html">
-                                    Commencez gratuitement</a>
-                                <a class="btn btn-md lg:btn-lg dark:text-white border-gray-900 dark:border-white border-opacity-20 hover:border-opacity-40"
-                                    data-uc-toggle="" href="#uc-contact-modal">Voir une démonstration</a>
-                            </div>
-                            <p class="text-dark dark:text-white text-opacity-70 sm:mt-1 lg:mt-0">Aucune carte de crédit nécessaire. Pour le moment ...⌛</p>
+                            <h1 class="h2 sm:h1 lg:display-6 xl:display-5 m-0">Nos tarifs.</h1>
+                            <p class="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">0 charges supplémentaires. 0 frais cachés.</p>
+                            <ul class="uc-switcher-nav nav-x gap-0 p-narrow border rounded-2 fs-7 fw-medium"
+                                data-uc-switcher="connect: .pricing-switcher;">
+                                <li><a class="text-none w-128px cstack p-1" href="#">Mensuel</a></li>
+                                <li><a class="text-none w-128px cstack p-1" href="#">Annuel</a></li>
+                            </ul>
                         </div>
-                        <div class="hero-scene panel max-w-950px mx-auto"
-                            data-anime="targets: &gt; *; scale: [0.9, 1]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 750});">
-                            <div
-                                class="panel text-center overflow-hidden rounded-3 border border-5 border-dark dark:border-white dark:border-opacity-20">
-                                <img alt="Main hero image" src="./public/assets/images/dashboard.jpg" />
-                            </div>
-                            <div class="position-absolute bottom-0 ltr:end-0 rtl:start-0 ltr:me-n8 rtl:ms-n8 mb-n8">
-                                <img alt="sitting" class="w-200px d-block dark:d-none" src="./public/assets/images/sitting.svg" />
-                                <img alt="sitting-dark" class="w-200px d-none dark:d-block"
-                                    src="./public/assets/images/sitting-dark.svg" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Section end --><!-- Section start -->
-        <div class="trusted-brands section panel" id="trusted_brands">
-            <div class="section-outer panel pb-4 lg:pb-6">
-                <div class="container max-w-xl">
-                    <div class="section-inner panel">
-                        <div class="review-brands panel vstack justify-center gap-2 px-3 py-4 sm:px-4 sm:py-6 lg:p-6 text-center rounded-3 bg-secondary dark:bg-gray-800 overflow-hidden"
-                            data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 250;">
-                            <h3 class="title h4 sm:h3 lg:h2 m-0">Approuvé par les plus grandes enseignes</h3>
-                            <div class="vstack sm:hstack justify-center gap-1 fs-6 text-gray-900 dark:text-white">
-                                <div class="rating panel">
-                                    <div class="hstack justify-center gap-0">
-                                        <i class="icon fa-solid fa-star"></i>
-                                        <i class="icon fa-solid fa-star"></i>
-                                        <i class="icon fa-solid fa-star"></i>
-                                        <i class="icon fa-solid fa-star"></i>
-                                        <i class="icon fa-solid fa-star"></i>
-                                        <!-- <i class="icon unicon-star-filled"></i>
-                                        <i class="icon unicon-star-filled"></i>
-                                        <i class="icon unicon-star-filled"></i>
-                                        <i class="icon unicon-star-filled"></i>
-                                        <i class="icon unicon-star-filled"></i> -->
-                                    </div>
-                                </div>
-                                <span class="desc rtl:order-first">Basé sur plus ou moins 4,000 avis de clients satisfait. (Plutôt moins que plus 😉)</span>
-                            </div>
-                            <div class="panel mt-3 sm:mt-4">
-                                <div class="brands hstack gap-4 justify-between max-w-950px mx-auto logo-brands">
-                                    <img alt="Trustpilot" class="dark:d-none" src="./public/assets/images/01.svg" />
-                                    <img alt="Trustpilot" class="d-none dark:d-block" src="./public/assets/images/dark-01.svg" />
-                                    <img alt="Trustpilot" class="dark:d-none" src="./public/assets/images/02.svg" />
-                                    <img alt="Trustpilot" class="d-none dark:d-block" src="./public/assets/images/dark-02.svg" />
-                                    <img alt="Trustpilot" class="dark:d-none" src="./public/assets/images/03.svg" />
-                                    <img alt="Trustpilot" class="d-none dark:d-block" src="./public/assets/images/dark-03.svg" />
-                                    <img alt="Trustpilot" class="dark:d-none" src="./public/assets/images/04.svg" />
-                                    <img alt="Trustpilot" class="d-none dark:d-block" src="./public/assets/images/dark-04.svg" />
-                                    <img alt="Trustpilot" class="dark:d-none" src="./public/assets/images/05.svg" />
-                                    <img alt="Trustpilot" class="d-none dark:d-block" src="./public/assets/images/dark-05.svg" />
-                                    <img alt="Trustpilot" class="dark:d-none" src="./public/assets/images/06.svg" />
-                                    <img alt="Trustpilot" class="d-none dark:d-block" src="./public/assets/images/dark-06.svg" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Section end -->
-        <!-- Section start -->
-        <div class="main-features section panel" id="main_features">
-            <div class="section-outer panel py-6 xl:py-9">
-                <div class="container sm:max-w-md lg:max-w-lg xl:max-w-xl">
-                    <div class="section-inner panel">
-                        <div class="panel vstack gap-4 sm:gap-6 lg:gap-8">
-                            <h2 class="title h3 lg:h2 xl:h1 m-0 text-center max-w-550px mx-auto" 
-                                data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 250;" 
-                                style="transform: translateY(0px); opacity: 1;">
-                                Des fonctionnalités allant <span class="text-primary"> à l'essentiel</span>.</h2>
-                    
-                            <div class="feature-item panel"
-                                data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 100;">
-                                <div class="row child-cols col-match justify-between g-4 lg:g-8 xl:g-10">
-                                    <div class="col-12 sm:col-6 order-0 lg:order-1">
-                                        <div class="panel w-100">
-                                            <img alt="Share tools quickly and confidently in minutes" class="rounded-2"
-                                                src="./public/assets/images/feature-01-perso.png" />
-                                        </div>
-                                    </div>
-                                    <div class="col-12 sm:col-6 order-1 lg:order-0">
-                                        <div class="panel vstack justify-between gap-4 sm:gap-6 h-100">
-                                            <div>
-                                                <div class="panel vstack gap-2">
-                                                    <span class="fs-6 fw-bold m-0 text-primary">01.</span>
-                                                    <h3 class="h4 lg:h3 xl:h2 m-0">🔍 Analyse automatisée des données en quelques secondes</h3>
-                                                    <p class="fs-6 xl:fs-5 opacity-70 dark:opacity-80">
-                                                        Notre outil traite vos fichiers instantanément, 
-                                                        identifie les statistiques clés et met en lumière les tendances principales
-                                                        pour vous faire gagner un temps précieux.</p>
-                                                </div>
+                        <div class="uc-switcher pricing-switcher mt-4">
+                            <div>
+                                <div class="row child-cols-12 sm:child-cols-6 xl:child-cols-4 col-match justify-center g-2 lg:g-4"
+                                    data-anime="onview: -100; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 400});">
+                                    <div>
+                                        <div
+                                            class="tier panel vstack gap-2 xl:gap-4 px-3 py-4 sm:p-4 lg:p-6 rounded lg:rounded-2 bg-secondary dark:bg-gray-800">
+                                            <div class="panel">
+                                                <h3 class="title h5 sm:h4 dark:text-white">Essentials</h3>
+                                                <p class="desc dark:text-whiteopacity-70 dark:opacity-80">Pour une simple mise en clarté de vos données</p>
                                             </div>
-                                            <!-- <div>
-                                                <div class="p-3 panel vstack gap-3 rounded border">
-                                                    <p class="fs-6 dark:text-white">“Most of our time used to be taken
-                                                        up by administrative work whereas now we can focus on building
-                                                        out programs to help our employees.”</p>
-                                                    <div class="panel hstack gap-1">
-                                                        <img alt="Mark Zellers" class="w-40px rounded-circle"
-                                                            src="./public/assets/images/01.png" />
-                                                        <div class="panel vstack items-start gap-0">
-                                                            <h6 class="h6 m-0">Mark Zellers</h6>
-                                                            <span class="fs-7 opacity-70">Director of Human
-                                                                Resources.</span>
-                                                        </div>
+                                            <div class="panel">
+                                                <div class="panel vstack gap-narrow">
+                                                    <h5 class="title h3 sm:h2 m-0 dark:text-white">Gratuit</h5>
+                                                    <span class="fs-7 opacity-70">Upload de vos données en illimité</span>
+                                                    <div class="vstack gap-1 justify-center text-center mt-3">
+                                                        <a class="btn btn-md sm:btn-sm lg:btn-md btn-primary text-white"
+                                                            href="sign-up.php">Essayer gratuitement</a>
+                                                        <span class="fs-7 opacity-70 min-h-24px">Aucune carte de crédit nécessaire</span>
                                                     </div>
                                                 </div>
-                                            </div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr class="border-gray-100 dark:border-opacity-15 m-0 opacity-100"
-                                data-anime="onview: -200; width: [0, '100%']; easing: easeInOutExpo; duration: 750; delay: 100;" />
-                            <div class="feature-item panel"
-                                data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 100;">
-                                <div class="row child-cols col-match justify-between g-4 lg:g-8 xl:g-10">
-                                    <div class="col-12 sm:col-6 order-0 lg:order-1">
-                                        <div class="panel w-100">
-                                            <img alt="Connect every part of your entire business" class="rounded-2"
-                                                src="./public/assets/images/feature-02-perso.png" />
-                                        </div>
-                                    </div>
-                                    <div class="col-12 sm:col-6 order-1 lg:order-0">
-                                        <div class="panel vstack justify-between gap-4 sm:gap-6 h-100">
-                                            <div>
+                                            </div>
+                                            <div class="panel">
                                                 <div class="panel vstack gap-2">
-                                                    <span class="fs-6 fw-bold m-0 text-primary">02.</span>
-                                                    <h3 class="h4 lg:h3 xl:h2 m-0">🎨 Rapports stylisés et partageables</h3>
-                                                    <p class="fs-6 xl:fs-5 opacity-70 dark:opacity-80">
-                                                        Créez des rapports clairs et esthétiques, prêts à être exportés en PDF ou partagés avec vos collaborateurs. 
-                                                        Apportez une touche professionnelle avec des formats personnalisés et des éléments visuels professionnels et impactants.
-                                                    </p>
-                                                    <!-- <a class="uc-link fw-bold hstack gap-narrow" href="#">
-                                                        <span>See all integrations</span>
+                                                    <span class="fs-6 fw-bold dark:text-white">Fonctionnalités clés:</span>
+                                                    <div class="hstack gap-1 fs-7">
                                                         <i
-                                                            class="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px"></i>
-                                                    </a> -->
-                                                </div>
-                                            </div>
-                                            <!-- <div>
-                                                <div class="p-3 panel vstack gap-3 rounded border">
-                                                    <p class="fs-6 dark:text-white">“I can create a custom proposal with
-                                                        dynamic pricing tables, and get approval from my boss all within
-                                                        36 minutes.”</p>
-                                                    <div class="panel hstack gap-1">
-                                                        <img alt="Matt Henderson" class="w-40px rounded-circle"
-                                                            src="./public/assets/images/02.png" />
-                                                        <div class="panel vstack items-start gap-0">
-                                                            <h6 class="h6 m-0">Matt Henderson</h6>
-                                                            <span class="fs-7 opacity-70">Client Success Manager</span>
-                                                        </div>
+                                                            class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span>Upload de données en illimité (CSV, XLSX)</span>
+                                                    </div>
+                                                    <div class="hstack gap-1 fs-7">
+                                                        <i
+                                                            class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span>Choix entre plusieurs types de graphique</span>
+                                                    </div>
+                                                    <div class="hstack gap-1 fs-7">
+                                                        <i
+                                                            class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span>Sélection des colonnes pour croiser les données et renforcer l'analyse.</span>
                                                     </div>
                                                 </div>
-                                            </div> -->
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <hr class="border-gray-100 dark:border-opacity-15 m-0 opacity-100"
-                                data-anime="onview: -200; width: [0, '100%']; easing: easeInOutExpo; duration: 750; delay: 100;" />
-                            <div class="feature-item panel"
-                                data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 100;">
-                                <div class="row child-cols col-match justify-between g-4 lg:g-8 xl:g-10">
-                                    <div class="col-12 sm:col-6 order-0 lg:order-1">
-                                        <div class="panel w-100">
-                                            <img alt="Maintain compliance and control your apps" class="rounded-2"
-                                                src="./public/assets/images/feature-03-perso.png" />
-                                        </div>
-                                    </div>
-                                    <div class="col-12 sm:col-6 order-1 lg:order-0">
-                                        <div class="panel vstack justify-between gap-4 sm:gap-6 h-100">
-                                            <div>
+                                    <div>
+                                        <div
+                                            class="tier panel vstack gap-2 xl:gap-4 px-3 py-4 sm:p-4 lg:p-6 rounded lg:rounded-2 bg-secondary dark:bg-gray-800">
+                                            <span
+                                                class="position-absolute top-0 ltr:end-0 rtl:start-0 m-2 d-inline-flex py-narrow px-1 bg-primary rounded-1 text-white fs-7 fw-medium">Populaire</span>
+                                            <div class="panel">
+                                                <h3 class="title h5 sm:h4 dark:text-white">Business</h3>
+                                                <p class="desc dark:text-whiteopacity-70 dark:opacity-80">Pour une personnalisation et une analyse de vos données.</p>
+                                            </div>
+                                            <div class="panel">
+                                                <div class="panel vstack gap-narrow">
+                                                    <h5 class="title h3 sm:h2 m-0 dark:text-white">5€ EUR</h5>
+                                                    <span class="fs-7 opacity-70">Montant mensuel</span>
+                                                    <div class="vstack gap-1 justify-center text-center mt-3">
+                                                        <a class="btn btn-md sm:btn-sm lg:btn-md btn-primary text-white"
+                                                            href="sign-up.php">Essayer</a>
+                                                        <!-- <span class="fs-7 opacity-70 min-h-24px">No credit card required</span> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel">
                                                 <div class="panel vstack gap-2">
-                                                    <span class="fs-6 fw-bold m-0 text-primary">03.</span>
-                                                    <h3 class="h4 lg:h3 xl:h2 m-0">📂 Adaptabilité aux fichiers CSV et Excel.</h3>
-                                                    <p class="fs-6 xl:fs-5 opacity-70 dark:opacity-80">
-                                                        Que vos données soient simples ou complexes, 
-                                                        notre outil accepte toutes les structures de fichiers CSV et Excel. 
-                                                        Une solution conçue pour s’adapter à votre réalité métier.
-                                                    </p>
+                                                    <span class="fs-6 fw-bold dark:text-white">Pour aller plus loin:</span>
+                                                    <div class="hstack gap-1 fs-7">
+                                                        <i
+                                                            class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span>Fonctions du plan Essentials</span>
+                                                    </div>
+                                                    <div class="hstack gap-1 fs-7">
+                                                        <i
+                                                            class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span>Sélection et personnalisation du graphique</span>
+                                                    </div>
+                                                    <div class="hstack gap-1 fs-7">
+                                                        <i
+                                                            class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span>Analyse des données uploadés</span>
+                                                    </div>
+                                                    <div class="hstack gap-1 fs-7">
+                                                        <i
+                                                            class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span>Rapport de l'analyse des données par Intelligence Artificielle</span>
+                                                    </div>
+                                                    <div class="hstack gap-1 fs-7">
+                                                        <i
+                                                            class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span>Téléchargement du graphique (PDF, PNG)</span>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <!-- <div>
-                                                <div class="p-3 panel vstack gap-3 rounded border">
-                                                    <p class="fs-6 dark:text-white">“This powerfull tool eliminates the
-                                                        need to leave Salesforce to get things done.”</p>
-                                                    <div class="panel hstack gap-1">
-                                                        <img alt="Natalia Larsson" class="w-40px rounded-circle"
-                                                            src="./public/assets/images/04.png" />
-                                                        <div class="panel vstack items-start gap-0">
-                                                            <h6 class="h6 m-0">Natalia Larsson</h6>
-                                                            <span class="fs-7 opacity-70">Director of Sales
-                                                                Operations</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr class="border-gray-100 dark:border-opacity-15 m-0 opacity-100"
-                                data-anime="onview: -200; width: [0, '100%']; easing: easeInOutExpo; duration: 750; delay: 100;" />
-                            <div class="feature-item panel"
-                                data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 100;">
-                                <div class="row child-cols col-match justify-between g-4 lg:g-8 xl:g-10">
-                                    <div class="col-12 sm:col-6 order-0 lg:order-1">
-                                        <div class="panel w-100">
-                                            <img alt="Review quickly and confidently" class="rounded-2"
-                                                src="./public/assets/images/feature-04-perso.png" />
-                                        </div>
-                                    </div>
-                                    <div class="col-12 sm:col-6 order-1 lg:order-0">
-                                        <div class="panel vstack justify-between gap-4 sm:gap-6 h-100">
-                                            <div>
-                                                <div class="panel vstack gap-2">
-                                                    <span class="fs-6 fw-bold m-0 text-primary">04.</span>
-                                                    <h3 class="h4 lg:h3 xl:h2 m-0">⚙️ Options personnalisées pour différents objectifs.</h3>
-                                                    <p class="fs-6 xl:fs-5 opacity-70 dark:opacity-80">
-                                                        Sélectionnez un objectif d’analyse : optimiser vos ventes, suivre vos performances ou anticiper les tendances. 
-                                                        Notre IA ajuste ses recommandations pour répondre à vos attentes spécifiques.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <!-- <div>
-                                                <div class="p-3 panel vstack gap-3 rounded border">
-                                                    <p class="fs-6 dark:text-white">“We are based in Europe and the
-                                                        latest Data Protection Regulation forces us to look for service
-                                                        suppliers than comply with this regulation.”</p>
-                                                    <div class="panel hstack gap-1">
-                                                        <img alt="Sarah Edrissi" class="w-40px rounded-circle"
-                                                            src="./public/assets/images/03.png" />
-                                                        <div class="panel vstack items-start gap-0">
-                                                            <h6 class="h6 m-0">Sarah Edrissi</h6>
-                                                            <span class="fs-7 opacity-70">Lead Marketing</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Section end -->
-        <!-- Section start -->
-        <div class="key-features section panel overflow-hidden bg-gray-900 uc-dark" id="key_features">
-            <div class="section-outer panel py-6 xl:py-9 dark:bg-gray-800">
-                <div class="container sm:max-w-md lg:max-w-lg">
-                    <div class="section-inner panel">
-                        <div class="panel vstack gap-4 sm:gap-6 xl:gap-8">
-                            <h2 class="title h3 lg:h2 xl:h1 m-0 text-center max-w-550px mx-auto"
-                                data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 250;">
-                                Les points clés de notre outil <span class="text-primary">DataGraph.</span></h2>
-                            <div class="panel">
-                                <div class="row child-cols-12 sm:child-cols-6 lg:child-cols-4 col-match g-3"
-                                    data-anime="onview: -100; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
-                                    <div>
-                                        <div
-                                            class="feature-item panel p-4 border rounded-2 hover:bg-white dark:hover:bg-secondary dark:text-white dark:hover:text-gray-900 hover:scale-105 duration-150 transition-all">
-                                            <div class="vstack panel min-h-250px">
-                                                <!-- <i
-                                                    class="position-absolute top-0 ltr:end-0 rtl:start-0 icon-2 unicon-arrow-up-right rtl:-rotate-90"></i> -->
-                                                <div class="vstack justify-between gap-2 h-100">
-                                                    <!-- <i class="icon icon-4 unicon-document"></i> -->
-                                                    <i class="icon icon-4 fa-solid fa-magnifying-glass-chart"></i>
-                                                    <div class="panel">
-                                                        <div class="vstack gap-1">
-                                                            <h3 class="title h5 m-0 text-inherit">Analyse</h3>
-                                                            <p class="desc fs-6 opacity-70">Obtenez des rapports visuels percutants en fonction de vos données en quelques secondes..</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <a class="position-cover" href="page-features.php"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div
-                                            class="feature-item panel p-4 border rounded-2 hover:bg-white dark:hover:bg-secondary dark:text-white dark:hover:text-gray-900 hover:scale-105 duration-150 transition-all">
-                                            <div class="vstack panel min-h-250px">
-                                                <!-- <i
-                                                    class="position-absolute top-0 ltr:end-0 rtl:start-0 icon-2 unicon-arrow-up-right rtl:-rotate-90"></i> -->
-                                                <div class="vstack justify-between gap-2 h-100">
-                                                    <!-- <i class="icon icon-4 unicon-model"></i> -->
-                                                    <i class="icon icon-4 fa-solid fa-chart-simple"></i>
-                                                    <div class="panel">
-                                                        <div class="vstack gap-1">
-                                                            <h3 class="title h5 m-0 text-inherit">Visuel</h3>
-                                                            <p class="desc fs-6 opacity-70">Des insights clairs et stylisés qui permettent une meilleure visibilité des informations importantes.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <a class="position-cover" href="page-features.php"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div
-                                            class="feature-item panel p-4 border rounded-2 hover:bg-white dark:hover:bg-secondary dark:text-white dark:hover:text-gray-900 hover:scale-105 duration-150 transition-all">
-                                            <div class="vstack panel min-h-250px">
-                                                <!-- <i
-                                                    class="position-absolute top-0 ltr:end-0 rtl:start-0 icon-2 unicon-arrow-up-right rtl:-rotate-90"></i> -->
-                                                <div class="vstack justify-between gap-2 h-100">
-                                                    <!-- <i class="icon icon-4 unicon-task-approved"></i> -->
-                                                    <i class="icon icon-4 fa-solid fa-puzzle-piece"></i>
-                                                    <div class="panel">
-                                                        <div class="vstack gap-1">
-                                                            <h3 class="title h5 m-0 text-inherit">Compatibilité</h3>
-                                                            <p class="desc fs-6 opacity-70">Importez vos données facilement, quel que soit la nature de vos fichiers de base.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <a class="position-cover" href="page-features.php"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div
-                                            class="feature-item panel p-4 border rounded-2 hover:bg-white dark:hover:bg-secondary dark:text-white dark:hover:text-gray-900 hover:scale-105 duration-150 transition-all">
-                                            <div class="vstack panel min-h-250px">
-                                                <!-- <i
-                                                    class="position-absolute top-0 ltr:end-0 rtl:start-0 icon-2 unicon-arrow-up-right rtl:-rotate-90"></i> -->
-                                                <div class="vstack justify-between gap-2 h-100">
-                                                    <!-- <i class="icon icon-4 unicon-touch-interaction"></i> -->
-                                                    <i class="icon icon-4 fa-solid fa-bullseye"></i>
-                                                    <div class="panel">
-                                                        <div class="vstack gap-1">
-                                                            <h3 class="title h5 m-0 text-inherit">Objectifs</h3>
-                                                            <p class="desc fs-6 opacity-70">Adaptation de votre analyse en fonction de vos besoins spécifiques.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <a class="position-cover" href="page-features.php"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div
-                                            class="feature-item panel p-4 border rounded-2 hover:bg-white dark:hover:bg-secondary dark:text-white dark:hover:text-gray-900 hover:scale-105 duration-150 transition-all">
-                                            <div class="vstack panel min-h-250px">
-                                                <!-- <i
-                                                    class="position-absolute top-0 ltr:end-0 rtl:start-0 icon-2 unicon-arrow-up-right rtl:-rotate-90"></i> -->
-                                                <div class="vstack justify-between gap-2 h-100">
-                                                    <!-- <i class="icon icon-4 unicon-sub-volume"></i> -->
-                                                    <i class="icon icon-4 fa-regular fa-message"></i>
-                                                    <div class="panel">
-                                                        <div class="vstack gap-1">
-                                                            <h3 class="title h5 m-0 text-inherit">Recommandations </h3>
-                                                            <p class="desc fs-6 opacity-70">Obtenez des conseils pertinents pour améliorer vos performances.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <a class="position-cover" href="page-features.php"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div
-                                            class="feature-item panel p-4 border rounded-2 hover:bg-white dark:hover:bg-secondary dark:text-white dark:hover:text-gray-900 hover:scale-105 duration-150 transition-all">
-                                            <div class="vstack panel min-h-250px">
-                                                <!-- <i
-                                                    class="position-absolute top-0 ltr:end-0 rtl:start-0 icon-2 unicon-arrow-up-right rtl:-rotate-90"></i> -->
-                                                <div class="vstack justify-between gap-2 h-100">
-                                                    <!-- <i class="icon icon-4 unicon-currency"></i> -->
-                                                    <i class="icon icon-4 fa-solid fa-share-from-square"></i>
-                                                    <div class="panel">
-                                                        <div class="vstack gap-1">
-                                                            <h3 class="title h5 m-0 text-inherit">Partage </h3>
-                                                            <p class="desc fs-6 opacity-70">Exportez et partagez vos rapports instantanément.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <a class="position-cover" href="page-features.php"></a>
+                                            <div
+                                                class="position-absolute bottom-0 ltr:end-0 rtl:start-0 m-2 d-none md:d-block">
+                                                <img alt="money" class="w-100px lg:w-128px d-block dark:d-none"
+                                                    src="./public/assets/images/money.svg" />
+                                                <img alt="money-dark" class="w-100px lg:w-128px d-none dark:d-block"
+                                                    src="./public/assets/images/money-dark.svg" />
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Section end --><!-- Section start -->
-        <div class="pricing-tiers section panel overflow-hidden" id="pricing_tiers">
-            <div class="section-outer panel py-6 xl:py-9">
-                <div class="container sm:max-w-lg xl:max-w-xl">
-                    <div class="section-inner panel">
-                        <div class="panel vstack gap-4 sm:gap-6 xl:gap-8">
-                            <div class="heading panel max-w-550px mx-auto text-center"
-                                data-anime="onview: -100; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
-                                <h2 class="title h3 lg:h2 xl:h1">Nos tarifs</h2>
-                                <p class="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">0 charges supplémentaires. 0 frais cachés.</p>
-                            </div>
-                            <div class="content panel">
+                            <div>
                                 <div class="row child-cols-12 sm:child-cols-6 xl:child-cols-4 col-match justify-center g-2 lg:g-4"
                                     data-anime="onview: -100; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 400});">
                                     <div>
@@ -1117,7 +770,7 @@
                                                 class="position-absolute top-0 ltr:end-0 rtl:start-0 m-2 d-inline-flex py-narrow px-1 bg-primary rounded-1 text-white fs-7 fw-medium">Populaire</span>
                                             <div class="panel">
                                                 <h3 class="title h5 sm:h4 dark:text-white">Business</h3>
-                                                <p class="desc dark:text-whiteopacity-70 dark:opacity-80">Pour une personnalisation & une analyse de vos données.</p>
+                                                <p class="desc dark:text-whiteopacity-70 dark:opacity-80">Pour une personnalisation et une analyse de vos données.</p>
                                             </div>
                                             <div class="panel">
                                                 <div class="panel vstack gap-narrow">
@@ -1169,198 +822,65 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <div>
-                                        <div
-                                            class="tier panel vstack gap-2 xl:gap-4 px-3 py-4 sm:p-4 lg:p-6 rounded lg:rounded-2 bg-secondary dark:bg-gray-800">
-                                            <div class="panel">
-                                                <h3 class="title h5 sm:h4 dark:text-white">Enterprise</h3>
-                                                <p class="desc dark:text-whiteopacity-70 dark:opacity-80">Pour une analyse poussée de vos données et plus.</p>
-                                            </div>
-                                            <div class="panel">
-                                                <div class="panel vstack gap-narrow">
-                                                    <h5 class="title h3 sm:h2 m-0 dark:text-white">Let’s talk</h5>
-                                                    <span class="fs-7 opacity-70">Per‑seat or per‑tool pricing</span>
-                                                    <div class="vstack gap-1 justify-center text-center mt-3">
-                                                        <a class="btn btn-md sm:btn-sm lg:btn-md btn-dark text-white dark:bg-white dark:text-dark dark:hover:bg-secondary"
-                                                            href="page-contact.php">Contact sales</a>
-                                                        <span class="fs-7 opacity-70 min-h-24px">Respond within 24 hrs
-                                                            max</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="panel">
-                                                <div class="panel vstack gap-2">
-                                                    <span class="fs-6 fw-bold dark:text-white">Everything in Business,
-                                                        plus:</span>
-                                                    <div class="hstack gap-1 fs-7">
-                                                        <i
-                                                            class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
-                                                        <span>Unlimited files uploads</span>
-                                                    </div>
-                                                    <div class="hstack gap-1 fs-7">
-                                                        <i
-                                                            class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
-                                                        <span>Real-time tracking and notifications</span>
-                                                    </div>
-                                                    <div class="hstack gap-1 fs-7">
-                                                        <i
-                                                            class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
-                                                        <span>User performance</span>
-                                                    </div>
-                                                    <div class="hstack gap-1 fs-7">
-                                                        <i
-                                                            class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
-                                                        <span>SSO support and custom user roles</span>
-                                                    </div>
-                                                    <div class="hstack gap-1 fs-7">
-                                                        <i
-                                                            class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
-                                                        <span>Bulk send &amp; Forms*</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
                                 </div>
                             </div>
-                            <!-- <p class="text-center text-gray-900 dark:text-white text-opacity-70"
-                                data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 200;">
-                                Prix incluant toutes taxes.</p> -->
                         </div>
+                        <!-- <p class="text-center text-gray-900 dark:text-white text-opacity-70 mt-4 sm:mt-6 xl:mt-8"
+                            data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 0;">
+                            Prices exclude any applicable taxes.</p> -->
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Section end --><!-- Section start -->
-        <div class="clients-feedback section panel overflow-hidden" id="clients_feedback">
-            <div class="section-outer panel">
+        <!-- Section end -->
+        <!-- Section start -->
+        <div class="section panel overflow-hidden" id="faq">
+            <div class="section-outer panel pb-7 sm:pb-8">
                 <div class="container max-w-lg">
-                    <div class="section-inner panel swiper-parent"
+                    <div class="section-inner panel"
                         data-anime="onview: -100; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
-                        <h2 class="h4 sm:h3 lg:h2 m-0 text-center">Quelques avis clients</h2>
-                        <div class="panel p-3 lg:p-6 bg-secondary dark:bg-gray-800 rounded-3 mt-4 sm:mt-6">
-                            <div class="row child-cols-12 sm:child-cols-6 col-match g-3 lg:g-8">
-                                <div>
-                                    <div class="panel rounded-2 overflow-hidden">
-                                        <div class="swiper connect-image"
-                                            data-uc-swiper="items: 1; autoplay: 5000; dots: .swiper-pagination; effect: fade; fade: true; allowTouchMove: false; disableOnInteraction: true;">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <figure
-                                                        class="featured-image m-0 rounded ratio ratio-3x4 uc-transition-toggle overflow-hidden">
-                                                        <img alt="Mark Zellers"
-                                                            class="media-cover image uc-transition-scale-up uc-transition-opaque"
-                                                            src="./public/assets/images/01.jpg" />
-                                                    </figure>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <figure
-                                                        class="featured-image m-0 rounded ratio ratio-3x4 uc-transition-toggle overflow-hidden">
-                                                        <img alt="André Garcia"
-                                                            class="media-cover image uc-transition-scale-up uc-transition-opaque"
-                                                            src="./public/assets/images/02.jpg" />
-                                                    </figure>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <figure
-                                                        class="featured-image m-0 rounded ratio ratio-3x4 uc-transition-toggle overflow-hidden">
-                                                        <img alt="Matt Henderson"
-                                                            class="media-cover image uc-transition-scale-up uc-transition-opaque"
-                                                            src="./public/assets/images/03.jpg" />
-                                                    </figure>
-                                                </div>
-                                            </div>
+                        <div class="panel">
+                            <h2 class="h4 sm:h3 lg:h2 m-0 text-center">Foire aux questions (FAQ):</h2>
+                            <div
+                                class="panel mt-4 sm:mt-6 lg:mt-8 p-3 sm:p-4 xl:p-6 lg:max-w-750px xl:w-auto m-auto rounded-2 bg-secondary dark:bg-gray-800">
+                                <ul class="gap-4" data-uc-accordion="targets: &gt; li;">
+                                    <li class="uc-open">
+                                        <a class="uc-accordion-title fs-5 sm:fs-4" href="#">Comment fonctionne Datagraph ?</a>
+                                        <div class="uc-accordion-content">
+                                            <p>
+                                                Datagraph analyse les données de vos fichiers CSV ou Excel pour générer des graphiques visuels 
+                                                et des rapports détaillés en quelques secondes. 
+                                                Il suffit de télécharger votre fichier, de choisir vos options, et Datagraph fait le reste.
+                                            </p>
                                         </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="panel">
-                                        <div class="swiper h-100"
-                                            data-uc-swiper="connect: .connect-image; items: 1; autoplay: 5000; dots: .swiper-pagination; effect: fade; fade: true;">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide h-100">
-                                                    <div
-                                                        class="panel vstack justify-between items-center gap-2 lg:gap-4 h-100 text-center">
-                                                        <div class="panel">
-                                                            <i class="icon icon-4 unicon-quotes text-primary"></i>
-                                                            <p
-                                                                class="fs-6 sm:fs-5 lg:fs-4 fw-bold mt-1 sm:mt-4 dark:text-white">
-
-                                                                “Datagraph m’a fait gagner un temps précieux ! En quelques clics, 
-                                                                j’obtiens des graphiques clairs et des rapports adaptés à mes présentations. 
-                                                                C’est l’outil indispensable pour toute analyse rapide et visuelle.”
-
-                                                            </p>
-                                                        </div>
-                                                        <div class="panel pt-3">
-                                                            <div class="panel vstack items-center gap-narrow">
-                                                                <h6 class="h5 m-0">Julian Retegui</h6>
-                                                                <span class="fs-6 opacity-70">Responsable Marketing</span>
-                                                            </div>
-                                                            <div class="panel mt-6">
-                                                                <div
-                                                                    class="swiper-pagination text-primary m-0 justify-center">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide h-100">
-                                                    <div
-                                                        class="panel vstack justify-between items-center gap-2 lg:gap-4 h-100 text-center">
-                                                        <div class="panel">
-                                                            <i class="icon icon-4 unicon-quotes text-primary"></i>
-                                                            <p
-                                                                class="fs-6 sm:fs-5 lg:fs-4 fw-bold mt-1 sm:mt-4 dark:text-white">
-
-                                                                “Un outil simple et puissant ! 
-                                                                J’apprécie particulièrement la rapidité avec laquelle je peux convertir mes fichiers Excel en rapports exploitables. 
-                                                                Datagraph a définitivement simplifié mes tâches d’analyse au quotidien.”
-
-                                                            </p>
-                                                        </div>
-                                                        <div class="panel pt-3">
-                                                            <div class="panel vstack items-center gap-narrow">
-                                                                <h6 class="h5 m-0">André Gomez</h6>
-                                                                <span class="fs-6 opacity-70">Chef de projet</span>
-                                                            </div>
-                                                            <div class="panel mt-6">
-                                                                <div
-                                                                    class="swiper-pagination text-primary m-0 justify-center">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide h-100">
-                                                    <div
-                                                        class="panel vstack justify-between items-center gap-2 lg:gap-4 h-100 text-center">
-                                                        <div class="panel">
-                                                            <i class="icon icon-4 unicon-quotes text-primary"></i>
-                                                            <p
-                                                                class="fs-6 sm:fs-5 lg:fs-4 fw-bold mt-1 sm:mt-4 dark:text-white">
-                                                                “Je recommande Datagraph à tous ceux qui travaillent avec des données ! 
-                                                                Les options de personnalisation permettent de répondre à n’importe quel besoin, 
-                                                                et le design des rapports donne une vraie touche professionnelle.”
-                                                            </p>
-                                                        </div>
-                                                        <div class="panel pt-3">
-                                                            <div class="panel vstack items-center gap-narrow">
-                                                                <h6 class="h5 m-0">Benjamin Bourigeaud</h6>
-                                                                <span class="fs-6 opacity-70">Freelance en Data Science</span>
-                                                            </div>
-                                                            <div class="panel mt-6">
-                                                                <div
-                                                                    class="swiper-pagination text-primary m-0 justify-center">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    </li>
+                                    <li>
+                                        <a class="uc-accordion-title fs-5 sm:fs-4" href="#">Quels types de fichiers puis-je utiliser avec Datagraph ?</a>
+                                        <div class="uc-accordion-content">
+                                            <p>
+                                                Vous pouvez utiliser des fichiers CSV et Excel (XLS et XLSX). Assurez-vous que vos fichiers sont correctement structurés pour garantir une analyse optimale.
+                                            </p>
                                         </div>
-                                    </div>
-                                </div>
+                                    </li>
+                                    <li>
+                                        <a class="uc-accordion-title fs-5 sm:fs-4" href="#">Datagraph est-il adapté à tous les domaines ?</a>
+                                        <div class="uc-accordion-content">
+                                            <p>Oui ! Datagraph est conçu pour être polyvalent. Que vous soyez dans le marketing, la finance, la gestion de projets ou tout autre secteur, l’outil s’adapte à vos besoins et vos objectifs.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="uc-accordion-title fs-5 sm:fs-4" href="#">Puis-je personnaliser les graphiques et rapports ?</a>
+                                        <div class="uc-accordion-content">
+                                            <p>Absolument. Vous pouvez choisir parmi différents types de graphiques, personnaliser les couleurs, et définir des objectifs spécifiques pour orienter les recommandations.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="uc-accordion-title fs-5 sm:fs-4" href="#">Mes données sont-elles sécurisées avec Datagraph ?</a>
+                                        <div class="uc-accordion-content">
+                                            <p>Oui. Datagraph respecte la confidentialité de vos données et ne les conserve pas après leur traitement. Toutes vos informations restent privées et sécurisées.</p>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -1368,13 +888,106 @@
             </div>
         </div>
         <!-- Section end -->
-
         <!-- Section start -->
-        <!-- <div class="clients-brands section panel overflow-hidden" id="clients_brands">
+        <div class="clients-feedbacks section panel overflow-hidden" id="clients_feedbacks">
+            <div class="section-outer panel pb-6 xl:pb-9">
+                <div class="container max-w-lg">
+                    <div class="section-inner panel">
+                        <div class="panel vstack justify-center items-center gap-4 sm:gap-6 xl:gap-8"
+                            data-anime="onview: -100; targets: &gt; *; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
+                            <h2 class="h4 sm:h3 lg:h2 m-0 text-center">Quelques avis clients</h2>
+                            <div class="row child-cols-12 sm:child-cols-6 xl:child-cols-4 justify-center col-match g-2 lg:g-3"
+                                data-uc-grid="">
+                                <div>
+                                    <div class="px-3 sm:px-4 py-4 panel vstack justify-between gap-3 rounded-2 border">
+                                        <div class="panel vstack items-start gap-2">
+                                            <div class="panel">
+                                                <div class="hstack h-48px">
+                                                    <img alt="Brand" class="w-128px text-gray-900 dark:text-white"
+                                                        data-uc-svg="" src="./public/assets/images/brand-07.svg" />
+                                                </div>
+                                            </div>
+                                            <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">
+                                                “Datagraph m’a fait gagner un temps précieux ! En quelques clics, 
+                                                j’obtiens des graphiques clairs et des rapports adaptés à mes présentations. 
+                                                C’est l’outil indispensable pour toute analyse rapide et visuelle.”</p>
+                                        </div>
+                                        <div class="panel hstack gap-2 mt-2 lg:mt-4">
+                                            <img alt="Julien R." class="w-40px rounded-circle" src="./public/assets/images/01.png" />
+                                            <div class="panel vstack items-start gap-0">
+                                                <h6 class="h6 m-0">Julien R.</h6>
+                                                <span class="fs-7 opacity-70">Responsable Marketing</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="px-3 sm:px-4 py-4 panel vstack justify-between gap-3 rounded-2 border">
+                                        <div class="panel vstack items-start gap-2">
+                                            <div class="panel">
+                                                <div class="hstack h-48px">
+                                                    <img alt="Brand" class="w-128px text-gray-900 dark:text-white"
+                                                        data-uc-svg="" src="./public/assets/images/brand-06.svg" />
+                                                </div>
+                                            </div>
+                                            <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">
+                                                “Un outil simple et puissant ! 
+                                                J’apprécie particulièrement la rapidité avec laquelle je peux convertir mes fichiers Excel en rapports exploitables. 
+                                                Datagraph a définitivement simplifié mes tâches d’analyse au quotidien.”
+                                            </p>
+                                        </div>
+                                        <div class="panel hstack gap-2 mt-2 lg:mt-4">
+                                            <img alt="Marie L." class="w-40px rounded-circle"
+                                                src="./public/assets/images/04.png" />
+                                            <div class="panel vstack items-start gap-0">
+                                                <h6 class="h6 m-0">Marie L.</h6>
+                                                <span class="fs-7 opacity-70">Freelance en Data Science</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="px-3 sm:px-4 py-4 panel vstack justify-between gap-3 rounded-2 border">
+                                        <div class="panel vstack items-start gap-2">
+                                            <div class="panel">
+                                                <div class="hstack h-48px">
+                                                    <img alt="Brand" class="w-128px text-gray-900 dark:text-white"
+                                                        data-uc-svg="" src="./public/assets/images/brand-08.svg" />
+                                                </div>
+                                            </div>
+                                            <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">
+                                                “Je recommande Datagraph à tous ceux qui travaillent avec des données ! 
+                                                Les options de personnalisation permettent de répondre à n’importe quel besoin, 
+                                                et le design des rapports donne une vraie touche professionnelle.”
+                                            </p>
+                                        </div>
+                                        <div class="panel hstack gap-2 mt-2 lg:mt-4">
+                                            <img alt="Thérèse M." class="w-40px rounded-circle"
+                                                src="./public/assets/images/03.png" />
+                                            <div class="panel vstack items-start gap-0">
+                                                <h6 class="h6 m-0">Thérèse M.</h6>
+                                                <span class="fs-7 opacity-70">Chef de Projet</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <a class="uc-link fw-bold d-inline-flex items-center gap-narrow" href="#">
+                                <span>Voir tout les avis clients</span>
+                                <i class="icon icon-1 unicon-arrow-right rtl:rotate-180"></i>
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Section end -->
+        <!-- Section start -->
+        <div class="clients-brands section panel overflow-hidden" id="clients_brands">
             <div class="section-outer panel pt-6 pb-8 sm:pt-8 sm:pb-9 xl:py-9">
                 <h5 class="h6 sm:h5 text-center mb-4 sm:mb-6 xl:mb-8"
                     data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 200;">
-                    Trusted by well-known brands.</h5>
+                    Avec la confiance de grandes enseignes.</h5>
                 <div class="block-panel panel"
                     data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 250;">
                     <div class="element-brands max-w-950px m-auto text-gray-900 dark:text-white">
@@ -1407,64 +1020,7 @@
                     </div>
                 </div>
             </div>
-        </div> -->
-        <!-- Section end -->
-         
-        <!-- Section start -->
-            <!-- <div class="cta section panel overflow-hidden" id="cta">
-            <div class="section-outer panel py-4 sm:py-6 xl:py-9 bg-secondary dark:bg-gray-800">
-                <div class="d-none lg:d-block"
-                    data-anime="onview: -100; targets: img; scale: [0.8, 1]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 350;">
-                    <div class="position-absolute top-50 start-0 translate-middle-y ms-n6">
-                        <img alt="talking" class="w-200px xl:w-250px d-block dark:d-none" src="./public/assets/images/talking.svg" />
-                        <img alt="talking-dark" class="w-200px xl:w-250px d-none dark:d-block"
-                            src="./public/assets/images/talking-dark.svg" />
-                    </div>
-                    <div class="position-absolute top-50 end-0 translate-middle-y me-n6">
-                        <img alt="chatting" class="w-200px xl:w-250px d-block dark:d-none" src="./public/assets/images/chatting.svg" />
-                        <img alt="chatting-dark" class="w-200px xl:w-250px d-none dark:d-block"
-                            src="./public/assets/images/chatting-dark.svg" />
-                    </div>
-                </div>
-                <div class="d-none lg:d-block"
-                    data-anime="targets: &gt;*; scale: [0, 1]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 750});">
-                    <div class="position-absolute top-0 start-0 rotate-45"
-                        style="top: 40% !important; left: 24% !important">
-                        <img alt="star-1" class="w-32px text-gray-900 dark:text-white" data-uc-svg=""
-                            src="./public/assets/images/star-1.svg" />
-                    </div>
-                    <div class="position-absolute bottom-0 ltr:end-0 rtl:start-0 rotate-45"
-                        style="bottom: 40% !important; right: 24% !important">
-                        <img alt="star-2" class="w-32px text-gray-900 dark:text-white" data-uc-svg=""
-                            src="./public/assets/images/star-2.svg" />
-                    </div>
-                    <div class="position-absolute bottom-0 start-0"
-                        style="bottom: -4% !important; left: 28% !important">
-                        <img alt="arrow-1" class="w-100px xl:w-150px text-gray-900 dark:text-white text-opacity-20"
-                            data-uc-svg="" src="./public/assets/images/arrow-3.svg" />
-                    </div>
-                </div>
-                <div class="container max-w-xl">
-                    <div class="section-inner panel">
-                        <div class="vstack items-center gap-2 sm:max-w-600px lg:max-w-650px mx-auto text-center"
-                            data-anime="onview:-100; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
-                            <h2 class="h3 sm:h1 xl:display-6 m-0">Create stunning websites that fits <span
-                                    class="text-primary">your needs.</span></h2>
-                            <p class="fs-6 sm:fs-5 text-dark dark:text-white text-opacity-70 mt-1 lg:mt-2">Try Lexend
-                                today.</p>
-                            <div class="vstack sm:hstack justify-center gap-1 lg:gap-2 mt-1 lg:mt-2">
-                                <a class="btn btn-md lg:btn-lg btn-primary text-white" href="tarifs.html">Try
-                                    Lexend today</a>
-                                <a class="btn btn-md lg:btn-lg dark:text-white border-gray-900 dark:border-white border-opacity-20 hover:border-opacity-40"
-                                    data-uc-toggle="" href="#uc-contact-modal">Contact sales</a>
-                            </div>
-                            <p class="fs-7 text-dark dark:text-white text-opacity-70">14-day trial, no credit card
-                                required.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+        </div>
         <!-- Section end -->
 
         <!-- Footer start -->
@@ -1583,6 +1139,7 @@
     <script src="./public/assets/js/uni-core-bundle.min.js"></script>
     <!-- include app script -->
     <script defer="" src="./public/assets/js/app.js"></script>
+    <script defer="" src="./public/assets/js/script.js"></script>
     <script>
 
         // Schema toggle via URL
