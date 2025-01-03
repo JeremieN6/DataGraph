@@ -212,7 +212,7 @@ document.getElementById('generateAIReport').addEventListener('click', async () =
 
         if (response.ok) {
             // Afficher le rapport dans l'élément HTML
-            document.getElementById('reportOutput').innerText = result.report;
+            document.getElementById('reportOutput').innerHTML = result.report;
         } else {
             // Afficher un message d'erreur si la réponse est mauvaise
             document.getElementById('reportOutput').innerText = `Erreur: ${result.error}`;
