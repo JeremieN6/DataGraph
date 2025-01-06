@@ -48,7 +48,11 @@ function handleFile(event) {
 
 // Fonction pour parser le CSV
 function parseCSV(data) {
-    const rows = data.trim().split("\n").map(row => row.split(","));
+    // Détection du séparateur (virgule ou point-virgule)
+    const separator = data.includes(";") ? ";" : ",";
+    
+    // Découpage des lignes et colonnes en fonction du séparateur détecté
+    const rows = data.trim().split("\n").map(row => row.split(separator));
     const headers = rows[0].map(header => header.trim());
     const dataRows = rows.slice(1).map(row =>
         row.map((cell, index) => (index > 0 && !isNaN(cell) ? Number(cell) : cell.trim()))
