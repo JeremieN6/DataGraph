@@ -29,7 +29,11 @@ function handleFile(event) {
     if (file) {
         const reader = new FileReader();
         reader.onload = function (e) {
-            const csvData = e.target.result;
+            const data = new Uint8Array(e.target.result);
+            const workbook = XLSX.read(data, { type: 'array' });
+            const firstSheetName = workbook.SheetNames[0];
+            const worksheet = workbook.Sheets[firstSheetName];
+            const csvData = XLSX.utils.sheet_to_csv(worksheet);
             try {
                 parsedData = parseCSV(csvData); // Stocke les données dans parsedData
                 if (parsedData.headers.length > 0) {
@@ -42,7 +46,7 @@ function handleFile(event) {
                 alert("Erreur lors du traitement du fichier CSV : " + error.message);
             }
         };
-        reader.readAsText(file);
+        reader.readAsArrayBuffer(file);
     }
 }
 
